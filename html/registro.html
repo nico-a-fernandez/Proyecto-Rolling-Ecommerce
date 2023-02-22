@@ -12,7 +12,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <title>Rolling-Teck LOGIN</title>
+    <title>Rolling-Teck REGISTER</title>
   </head>
   <body class="main">
     <!-- INICIO POPUP LOGIN -->
@@ -27,6 +27,17 @@
             <h1 class="fw-bold text-center py-10">Bienvenido</h1>
 
             <form action="">
+              <div class="mb-3">
+                <label for="username" class="form-label"
+                  >Nombre de usuario</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  required
+                />
+              </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Correo electrónico</label>
                 <input
@@ -62,15 +73,11 @@
               </div>
               <div class="d-grid">
                 <button type="submit" class="btn btn-primary" id="buttonSubmit">
-                  Iniciar sesión
+                  Registrarse
                 </button>
               </div>
               <div class="texti my-3">
-                <p>¿No tienes cuenta? <a href="registro.html">Registrate</a></p>
-                <p>
-                  ¿Olvidaste tu contraseña?
-                  <a href="">Recuperar contraseña</a>
-                </p>
+                <p>¿Ya tienes cuenta? <a href="login.html">Inicia Sesión</a></p>
               </div>
             </form>
           </div>
@@ -88,7 +95,7 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/login.js"></script>
+    <script src="../js/registro.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <!-- FIN SCRIPTS -->
   </body>

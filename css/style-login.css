@@ -13,35 +13,16 @@ body {
   height: 100vh;
 }
 
-.contenedor {
-  background-color: black;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-  justify-content: center;
-}
-
 .main {
   background-color: black;
-  background-image: url(https://img.pikbest.com/png-images/20211009/people-watching-movie-outdoors-in-evening_6139154.png!bw700);
+  background-image: url(https://sso.igeoapp.com/img/fondos/fondo_login_erp_2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.container {
-  margin-bottom: 20%;
-}
-
 .login {
   background-color: black;
-  opacity: 90%;
-}
-
-h2 {
-  color: white;
 }
 
 label {
@@ -55,28 +36,4 @@ h1 {
   color: rgb(233, 238, 245);
   font-size: 20px;
   padding: 20px;
-}
-
-button {
-  padding: 13px 30px;
-  border-radius: 15px;
-  border: none;
-  background: rgb(5, 129, 245);
-  color: white;
-}
-
-.row {
-  margin-bottom: 2rem;
-}
-
-.link {
-  text-decoration: none;
-}
-
-h5 {
-  color: antiquewhite;
-}
-
-span {
-  background-color: aliceblue;
 }
