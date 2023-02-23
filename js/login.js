@@ -1,5 +1,13 @@
 const button = document.getElementById("buttonSubmit");
 
+const userAdmin = {
+  username: "admin",
+  email: "admin@admin.com",
+  password: "admin@123",
+  admin: true,
+};
+localStorage.setItem("userAdmin", JSON.stringify(userAdmin));
+
 button.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -9,9 +17,10 @@ button.addEventListener("click", (event) => {
   const user = JSON.parse(localStorage.getItem("user"));
 
   if (user) {
-    const hash = CryptoJS.SHA256(password);
-
-    if (user.username == username && user.password == hash.toString()) {
+    if (
+      (user.username == username && user.password == password) ||
+      (userAdmin.username == username && userAdmin.password == password)
+    ) {
       user.id = Date.now();
 
       localStorage.setItem("user", JSON.stringify(user));
