@@ -29,18 +29,22 @@
 
             <form action="">
               <div class="mb-3">
-                <label for="username" class="form-label">Nombre completo</label>
+                <label for="username" class="form-label"
+                  >Nombre de usuario</label
+                >
                 <input
                   type="text"
                   class="form-control"
                   id="username"
                   required
                 />
-                <label for="userlastname" class="form-label">Apellido</label>
+                <label for="name" class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" id="name" required />
+                <label for="lastname" class="form-label">Apellido</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="userlastname"
+                  id="lastname"
                   required
                 />
               </div>
@@ -53,9 +57,6 @@
                   aria-describedby="emailHelp"
                   required
                 />
-                <div id="emailHelp" class="form-text">
-                  Nunca compartiremos sus datos.
-                </div>
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Contraseña</label>

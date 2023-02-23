@@ -10,8 +10,9 @@ button.addEventListener("click", (event) => {
   const hash = CryptoJS.SHA256(password);
 
   const user = {
-    name: document.getElementById("username").value,
-    lastname: document.getElementById("userlastname").value,
+    username: document.getElementById("username").value,
+    name: document.getElementById("name").value,
+    lastname: document.getElementById("lastname").value,
     email: document.getElementById("correo").value,
     password: hash.toString(),
   };
