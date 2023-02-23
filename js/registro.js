@@ -1,5 +1,7 @@
 const button = document.getElementById("buttonSubmit");
 
+let userList = [];
+
 button.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -13,6 +15,8 @@ button.addEventListener("click", (event) => {
     email: document.getElementById("correo").value,
     password: hash.toString(),
   };
+
+  userList += user;
 
   localStorage.setItem("user", JSON.stringify(user));
 
