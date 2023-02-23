@@ -20,7 +20,5 @@ button.addEventListener("click", (event) => {
     } else {
       alert("Los datos ingresados son incorrectos");
     }
-  } else {
-    window.location = "registro.html";
   }
 });
