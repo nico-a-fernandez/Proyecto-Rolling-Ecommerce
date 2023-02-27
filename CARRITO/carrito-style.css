@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin: 2rem;
+  width: 80vw;
+  padding: 2rem;
+}
+
+.botones-inicio {
+  margin: 4rem;
+}
+.main {
+  width: 80vw;
+  border: 0.5px black solid;
+}
+
+.botones-inicio {
+  display: flex;
+  align-self: flex-start;
+  margin: 2rem;
+}
+
+.list-group {
+  list-style: none;
+}
+
+.compras {
+  margin: 2rem;
+  margin-left: 3rem;
+}
+
+.img-descr-precio {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+}
+
+.list-camisa {
+  margin-bottom: 2rem;
+  border-bottom: 0.5px black solid;
+}
+
+.list-pantalon {
+  margin-bottom: 2rem;
+  border-bottom: 0.5px black solid;
+}
+
+span {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.img1 {
+  width: 5rem;
+  margin-right: 1rem;
+}
+.img2 {
+  width: 5rem;
+  margin-right: 1rem;
+}
+
+.totales {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.botones {
+  font-size: 3rem;
+}
