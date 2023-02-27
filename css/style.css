@@ -1,0 +1,14 @@
+.main__cards {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+}
+.contacto {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
+	margin: 2rem;
+	background: #141, 153, 174;
+}
