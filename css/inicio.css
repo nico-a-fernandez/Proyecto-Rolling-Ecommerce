@@ -4,6 +4,15 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--font-family: "rubik";
+	--color-red: #e63946;
+	--color-beige: #f1faee;
+	--color-green: #a8dadc;
+	--color-greyish-blue: #457b9d;
+	--color-dark-blue: #1d3557;
+}
+
 .cards {
 	display: flex;
 	flex-direction: row;
@@ -13,6 +22,11 @@
 	align-items: center;
 	margin: 2rem;
 	flex-wrap: wrap;
+	font-family: var(--font-family);
+}
+
+.cards h5 {
+	font-weight: 700;
 }
 
 .cards__precio-agregar {
@@ -21,7 +35,7 @@
 }
 
 .cards__precio-agregar span {
-	background: #2b2d42;
+	background: var(--color-dark-blue);
 	width: 10rem;
 	margin: 0;
 	position: relative;
@@ -41,10 +55,23 @@
 	position: relative;
 	left: 12rem;
 	color: green;
+	font-weight: 300;
 }
 
 .ultimos-ingresos {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.ultimos-ingresos h2 {
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 50px;
+}
+
+@media (max-width: 479px) {
+	.ultimos-ingresos h2 {
+		font-size: 40px;
+	}
 }
