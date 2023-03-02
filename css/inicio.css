@@ -1,14 +1,50 @@
-.main__cards {
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.cards {
 	display: flex;
 	flex-direction: row;
 	gap: 2rem;
-}
-.contacto {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	text-align: center;
-	gap: 2rem;
 	margin: 2rem;
-	background: #141, 153, 174;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem;
+	flex-wrap: wrap;
+}
+
+.cards__precio-agregar {
+	display: flex;
+	justify-content: space-between;
+}
+
+.cards__precio-agregar span {
+	background: #2b2d42;
+	width: 10rem;
+	margin: 0;
+	position: relative;
+	left: 1rem;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	padding: 0.2rem;
+}
+
+.stock {
+	margin: 1.5rem 0 0 0;
+	text-align: end;
+	font-size: 12px;
+	border-left: 1px gray solid;
+	width: 4rem;
+	position: relative;
+	left: 12rem;
+	color: green;
+}
+
+.ultimos-ingresos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

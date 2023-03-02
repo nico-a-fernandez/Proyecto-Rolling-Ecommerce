@@ -11,6 +11,7 @@
 			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
 			crossorigin="anonymous"
 		/>
+
 		<link rel="stylesheet" href="./css/inicio.css" />
 		<link rel="stylesheet" href="./js/inicio.js" />
 	</head>
@@ -64,25 +65,8 @@
 				</button>
 			</div>
 		</div>
-		<div class="contacto">
-			<div class="venta-telefonica">
-				<h2>VENTA TELEFÓNICA</h2>
-				<p>(123)456789</p>
-			</div>
-			<div class="horarios">
-				<h2>HORARIOS</h2>
-				<p>lunes a viernes de 9hs. a 17hs.</p>
-			</div>
-			<div class="mail">
-				<h2>ESCRIBINOS</h2>
-				<p>consultas@rollingteck.com</p>
-			</div>
-			<div class="whatsapp">
-				<h2>WHATSAPP</h2>
-				<p>+549 11 1234 567 89</p>
-			</div>
-		</div>
-		<div class="main__cards">
+
+		<div id="cards_productos" class="cards cards_productos">
 			<div class="card" style="width: 18rem">
 				<img
 					src="https://fullh4rd.com.ar/img/productos/Pics_Prod/video-geforce-gtx-1660-6gb-gigabyte-oc-nv-0.jpg"
@@ -90,12 +74,125 @@
 					alt="..."
 				/>
 				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
+					<h5 class="card-title">Placa de video GEFORCE GTX 1660</h5>
 					<p class="card-text">
-						Some quick example text to build on the card title and make up the
-						bulk of the card's content.
+						laca de video ultima genercacion compatible con...
 					</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+					<div class="cards__precio-agregar">
+						<a href="#" class="btn btn-primary">Agregar</a>
+						<span class="precio" id="precio">$12.500</span>
+					</div>
+					<div class="stock" id="stock">
+						<p>Hay Stock</p>
+					</div>
+				</div>
+			</div>
+			<div class="card" style="width: 18rem">
+				<img
+					src="https://fullh4rd.com.ar/img/productos/Pics_Prod/video-geforce-gtx-1660-6gb-gigabyte-oc-nv-0.jpg"
+					class="card-img-top"
+					alt="..."
+				/>
+				<div class="card-body">
+					<h5 class="card-title">Placa de video GEFORCE GTX 1660</h5>
+					<p class="card-text">
+						laca de video ultima genercacion compatible con...
+					</p>
+					<div class="cards__precio-agregar">
+						<a href="#" class="btn btn-primary">Agregar</a>
+						<span class="precio" id="precio">$12.500</span>
+					</div>
+					<div class="stock" id="stock">
+						<p>Hay Stock</p>
+					</div>
+				</div>
+			</div>
+			<div class="card" style="width: 18rem">
+				<img
+					src="https://fullh4rd.com.ar/img/productos/Pics_Prod/video-geforce-gtx-1660-6gb-gigabyte-oc-nv-0.jpg"
+					class="card-img-top"
+					alt="..."
+				/>
+				<div class="card-body">
+					<h5 class="card-title">Placa de video GEFORCE GTX 1660</h5>
+					<p class="card-text">
+						laca de video ultima genercacion compatible con...
+					</p>
+					<div class="cards__precio-agregar">
+						<a href="#" class="btn btn-primary">Agregar</a>
+						<span class="precio" id="precio">$12.500</span>
+					</div>
+					<div class="stock" id="stock">
+						<p>Hay Stock</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ingresos">
+			<div class="ultimos-ingresos">
+				<h2>Últimos Ingresos</h2>
+			</div>
+			<div class="cards cards_ingresos" id="cards_ingresos">
+				<div class="card" style="width: 18rem">
+					<img
+						src="https://fullh4rd.com.ar/img/productos/Pics_Prod/video-geforce-gtx-1660-6gb-gigabyte-oc-nv-0.jpg"
+						class="card-img-top"
+						alt="..."
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Placa de video GEFORCE GTX 1660</h5>
+						<p class="card-text">
+							laca de video ultima genercacion compatible con...
+						</p>
+						<div class="cards__precio-agregar">
+							<a href="#" class="btn btn-primary">Agregar</a>
+							<span class="precio" id="precio">$12.500</span>
+						</div>
+						<div class="stock" id="stock">
+							<p>Hay Stock</p>
+						</div>
+					</div>
+				</div>
+				<div class="card" style="width: 18rem">
+					<img
+						src="https://fullh4rd.com.ar/img/productos/Pics_Prod/video-geforce-gtx-1660-6gb-gigabyte-oc-nv-0.jpg"
+						class="card-img-top"
+						alt="..."
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Placa de video GEFORCE GTX 1660</h5>
+						<p class="card-text">
+							laca de video ultima genercacion compatible con...
+						</p>
+						<div class="cards__precio-agregar">
+							<a href="#" class="btn btn-primary">Agregar</a>
+							<span class="precio" id="precio">$12.500</span>
+						</div>
+						<div class="stock" id="stock">
+							<p>Hay Stock</p>
+						</div>
+					</div>
+				</div>
+				<div class="card" style="width: 18rem">
+					<img
+						src="https://fullh4rd.com.ar/img/productos/Pics_Prod/video-geforce-gtx-1660-6gb-gigabyte-oc-nv-0.jpg"
+						class="card-img-top"
+						alt="..."
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Placa de video GEFORCE GTX 1660</h5>
+						<p class="card-text">
+							laca de video ultima genercacion compatible con...
+						</p>
+						<div class="cards__precio-agregar">
+							<a href="#" class="btn btn-primary">Agregar</a>
+							<span class="precio" id="precio">$12.500</span>
+						</div>
+						<div class="stock" id="stock">
+							<p>Hay Stock</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
