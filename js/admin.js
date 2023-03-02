@@ -44,7 +44,7 @@ function mostrarProductos() {
               <h5 class="card-title">${producto.titulo}</h5>
               <p id="price" class="card-text">$  ${producto.precio}</p>
               <div class="card-footer text-center text-decoration-none">Stock: ${producto.stock}</div>
-              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="../html/carrito.html" class="btn btn-primary">Agregar al carrito</a>
               <button onclick="eliminarProducto('${producto.id}')" class="btn btn-danger">Eliminar</button>
               <button onclick="editPrice('${producto.precio}')" class="btn btn-warning">Editar</button>
           </div>
