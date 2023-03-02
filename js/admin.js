@@ -1,17 +1,18 @@
 const form = document.getElementById("formProductos");
 const inputTitle = document.getElementById("inputTitle");
 const inputPrice = document.getElementById("inputPrice");
+const inputStock = document.getElementById("inputStock");
 const inputImg = document.getElementById("inputImg");
 const tarjetaProducto = document.getElementById("cardProducto");
 const botonEliminar = document.getElementById("buttonEliminar");
 
 const userAdmin = JSON.parse(localStorage.getItem("userAdmin"));
 const localData = JSON.parse(localStorage.getItem("productos"));
-let productos = localData || [];
+const productos = localData || [];
 
-if (!userAdmin) {
-  window.location.href = "login.html";
-}
+// if (!userAdmin) {
+//   window.location.href = "login.html";
+// }
 
 function generarID() {
   return "_" + Math.random().toString(36).substring(2, 9);
@@ -23,6 +24,7 @@ form.onsubmit = (event) => {
     id: generarID(),
     titulo: inputTitle.value,
     precio: inputPrice.value,
+    stock: inputStock.value,
     imagen: inputImg.value,
   };
   productos.push(producto);
@@ -40,9 +42,11 @@ function mostrarProductos() {
           <img src="${producto.imagen}" class="card-img-top" alt="...">
           <div class="card-body">
               <h5 class="card-title">${producto.titulo}</h5>
-              <p class="card-text">${producto.precio}</p>
+              <p id="price" class="card-text">$  ${producto.precio}</p>
+              <div class="card-footer text-center text-decoration-none">Stock: ${producto.stock}</div>
               <a href="#" class="btn btn-primary">Agregar al carrito</a>
               <button onclick="eliminarProducto('${producto.id}')" class="btn btn-danger">Eliminar</button>
+              <button onclick="editPrice('${producto.precio}')" class="btn btn-warning">Editar</button>
           </div>
         </div>
         `
@@ -56,5 +60,15 @@ function eliminarProducto(id) {
   const json = JSON.stringify(productosFiltrados);
   localStorage.setItem("productos", json);
   productos = productosFiltrados;
+  mostrarProductos();
+}
+
+function editPrice(precio) {
+  let newPrice = productos.filter(
+    (producto) => (producto.precio = prompt("Nuevo precio"))
+  );
+  const json = JSON.stringify(newPrice);
+  localStorage.setItem("productos", json);
+  productos = newPrice;
   mostrarProductos();
 }
