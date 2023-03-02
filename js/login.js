@@ -17,15 +17,17 @@ button.addEventListener("click", (event) => {
   const user = JSON.parse(localStorage.getItem("user"));
 
   if (user) {
-    if (
-      (user.username == username && user.password == password) ||
-      (userAdmin.username == username && userAdmin.password == password)
-    ) {
+    if (user.username == username && user.password == password) {
       user.id = Date.now();
 
       localStorage.setItem("user", JSON.stringify(user));
 
       window.location = "../index.html";
+    } else if (
+      userAdmin.username == username &&
+      userAdmin.password == password
+    ) {
+      window.location = "../html/admin.html";
     } else {
       alert("Los datos ingresados son incorrectos");
     }
