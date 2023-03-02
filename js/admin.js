@@ -12,6 +12,7 @@ const userAdmin = JSON.parse(localStorage.getItem("userAdmin"));
 const localData = JSON.parse(localStorage.getItem("productos"));
 const productos = localData || [];
 
+// Funcion para verificar si esta logueado como admin (verifica el localstorage)
 // if (!userAdmin) {
 //   window.location.href = "login.html";
 // }
