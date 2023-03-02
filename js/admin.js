@@ -1,3 +1,4 @@
+// Traigo los elementos del html
 const form = document.getElementById("formProductos");
 const inputTitle = document.getElementById("inputTitle");
 const inputPrice = document.getElementById("inputPrice");
@@ -6,6 +7,7 @@ const inputImg = document.getElementById("inputImg");
 const tarjetaProducto = document.getElementById("cardProducto");
 const botonEliminar = document.getElementById("buttonEliminar");
 
+// Traigo los elementos guardados en el local storage
 const userAdmin = JSON.parse(localStorage.getItem("userAdmin"));
 const localData = JSON.parse(localStorage.getItem("productos"));
 const productos = localData || [];
@@ -14,10 +16,7 @@ const productos = localData || [];
 //   window.location.href = "login.html";
 // }
 
-function generarID() {
-  return "_" + Math.random().toString(36).substring(2, 9);
-}
-
+// Boton del form para agregar productos
 form.onsubmit = (event) => {
   event.preventDefault();
   const producto = {
@@ -34,6 +33,14 @@ form.onsubmit = (event) => {
   mostrarProductos();
 };
 
+// Funciones
+
+// Generar id aleatorio
+function generarID() {
+  return "_" + Math.random().toString(36).substring(2, 9);
+}
+
+// Generar la card del producto nuevo
 function mostrarProductos() {
   const productosMap = productos.map(
     (producto) =>
@@ -55,6 +62,7 @@ function mostrarProductos() {
 }
 mostrarProductos();
 
+// Eliminar producto
 function eliminarProducto(id) {
   const productosFiltrados = productos.filter((producto) => producto.id !== id);
   const json = JSON.stringify(productosFiltrados);
@@ -63,6 +71,7 @@ function eliminarProducto(id) {
   mostrarProductos();
 }
 
+// Editar precio
 function editPrice(id) {
   let productoId = productos.findIndex((producto) => producto.id == id);
   productos[productoId].precio = prompt("Ingrese el nuevo precio");
