@@ -18,6 +18,10 @@ body {
 	background: var(--color-background);
 }
 
+a {
+	text-decoration: none;
+}
+
 .cards {
 	display: flex;
 	flex-direction: row;
@@ -38,15 +42,17 @@ body {
 .card {
 	border-radius: 20px;
 	border: none;
-	/* box-shadow: 0.5px 0.5px 5px 1px var(--color-dark-blue); */
+	width: 18rem;
 }
 
 .card img {
 	border-radius: 20px;
+	margin-bottom: 1rem;
 }
 
 .cards p {
 	color: var(--color-dark-blue);
+	margin-top: 1rem;
 }
 
 .stock p {
@@ -56,6 +62,7 @@ body {
 .cards__precio-agregar {
 	display: flex;
 	justify-content: space-between;
+	margin-top: 1rem;
 }
 
 .cards__precio-agregar > span {
@@ -74,12 +81,10 @@ body {
 
 .stock {
 	margin: 1.5rem 0 0 0;
-	text-align: end;
+	text-align: start;
 	font-size: 12px;
-	border-left: 1px gray solid;
+	border-right: 1px gray solid;
 	width: 4rem;
-	position: relative;
-	left: 12rem;
 	color: green;
 	font-weight: 300;
 }
