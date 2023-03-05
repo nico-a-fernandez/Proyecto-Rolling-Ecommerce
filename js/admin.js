@@ -13,9 +13,9 @@ const localData = JSON.parse(localStorage.getItem("productos"));
 const productos = localData || [];
 
 // Funcion para verificar si esta logueado como admin (verifica el localstorage)
-// if (!userAdmin) {
-//   window.location.href = "login.html";
-// }
+if (!userAdmin) {
+  window.location.href = "../html/login.html";
+}
 
 // Boton del form para agregar productos
 form.onsubmit = (event) => {
