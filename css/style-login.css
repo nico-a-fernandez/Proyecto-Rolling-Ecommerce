@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+* {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62, 5%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.main {
+  background-color: black;
+  background-image: url(https://sso.igeoapp.com/img/fondos/fondo_login_erp_2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login {
+  background-color: black;
+}
+
+label {
+  color: antiquewhite;
+}
+p {
+  color: antiquewhite;
+}
+
+h1 {
+  color: rgb(233, 238, 245);
+  font-size: 20px;
+  padding: 20px;
+}
