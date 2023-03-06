@@ -1,4 +1,11 @@
 const localData = JSON.parse(localStorage.getItem("productos"));
+const userInvitado = JSON.parse(localStorage.getItem("user"));
+const buttonLog = document.getElementById("login-register");
+
+if (userInvitado) {
+  buttonLog.innerHTML =
+    '<a class="nav-link" href="../html/login.html"><button>Cerrar Sesión</button></a>';
+}
 
 const productos = localData || [
   {
