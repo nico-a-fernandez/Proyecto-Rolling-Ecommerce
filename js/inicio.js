@@ -1,4 +1,6 @@
-const productos = [
+const localData = JSON.parse(localStorage.getItem("productos"));
+
+const productos = localData || [
   {
     id: generarID(),
     imagen:
