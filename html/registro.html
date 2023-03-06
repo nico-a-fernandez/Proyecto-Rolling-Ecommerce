@@ -101,6 +101,7 @@
                 <label for="name" class="form-label">Nombre completo</label>
                 <input
                   type="text"
+                  pattern="[a-zA-Z\s]+"
                   class="form-control"
                   id="name"
                   maxlength="25"
@@ -112,6 +113,7 @@
                 <label for="lastname" class="form-label">Apellido</label>
                 <input
                   type="text"
+                  pattern="[a-zA-Z\s]+"
                   class="form-control"
                   id="lastname"
                   maxlength="25"
@@ -126,6 +128,7 @@
                   class="form-control"
                   id="correo"
                   aria-describedby="emailHelp"
+                  placeholder="name@example.com"
                   required
                 />
                 <span id="email_error" style="color: red"></span>

@@ -5,6 +5,8 @@ const confirm_password = document.getElementById("passwordConfirm");
 const password_error = document.getElementById("password_error");
 const emailInput = document.getElementById("correo");
 const errorMessage = document.getElementById("email_error");
+const inputName = document.getElementById("name");
+const inputLastname = document.getElementById("lastname");
 
 button.addEventListener("click", (event) => {
   event.preventDefault();
@@ -56,4 +58,17 @@ emailInput.addEventListener("input", function (event) {
   } else {
     errorMessage.textContent = "";
   }
+});
+
+// Validar los campos de nombre y apellido
+inputName.addEventListener("input", function () {
+  const currentValue = inputName.value;
+  const newValue = currentValue.replace(/[0-9]/g, "");
+  inputName.value = newValue;
+});
+
+inputLastname.addEventListener("input", function () {
+  const currentValue = inputLastname.value;
+  const newValue = currentValue.replace(/[0-9]/g, "");
+  inputLastname.value = newValue;
 });

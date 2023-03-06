@@ -71,44 +71,46 @@
     <h1 class="text-center mt-5">Pagina de Administracion</h1>
 
     <!-- Inicio Form agregar producto -->
-    <form class="w-75 mx-auto mt-5" id="formProductos">
-      <div class="mb-3">
-        <label for="inputTitle" class="form-label">Nombre del producto</label>
-        <input
-          required
-          type="text"
-          class="form-control"
-          id="inputTitle"
-          aria-describedby="emailHelp"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="inputPrice" class="form-label">Precio</label>
-        <span>ARS$</span>
-        <input
-          required
-          type="number"
-          min="0"
-          class="form-control"
-          id="inputPrice"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="inputPrice" class="form-label">Stock</label>
-        <input
-          required
-          type="number"
-          min="0"
-          class="form-control"
-          id="inputStock"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="inputImg" class="form-label">Imagen</label>
-        <input required type="text" class="form-control" id="inputImg" />
-      </div>
-      <button type="submit" class="btn btn-primary">Cargar</button>
-    </form>
+    <div>
+      <form class="w-75 mx-auto mt-5" id="formProductos">
+        <div class="mb-3">
+          <label for="inputTitle" class="form-label">Nombre del producto</label>
+          <input
+            required
+            type="text"
+            class="form-control"
+            id="inputTitle"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="inputPrice" class="form-label">Precio</label>
+          <span>ARS$</span>
+          <input
+            required
+            type="number"
+            min="0"
+            class="form-control"
+            id="inputPrice"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="inputPrice" class="form-label">Stock</label>
+          <input
+            required
+            type="number"
+            min="0"
+            class="form-control"
+            id="inputStock"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="inputImg" class="form-label">Imagen</label>
+          <input required type="text" class="form-control" id="inputImg" />
+        </div>
+        <button type="submit" class="btn btn-primary">Cargar</button>
+      </form>
+    </div>
     <!-- Fin form agregar producto -->
 
     <h1 class="mt-5 mb-5 text-center">Productos</h1>
