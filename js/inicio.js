@@ -2,15 +2,21 @@ const localData = JSON.parse(localStorage.getItem("productos"));
 const userInvitado = JSON.parse(localStorage.getItem("user"));
 const userAdmin = JSON.parse(localStorage.getItem("userAdmin"));
 const buttonLog = document.getElementById("login-register");
+const buttonAdmin = document.getElementById("pag-admin");
 
 if (userInvitado) {
   buttonLog.innerHTML =
     '<a class="nav-link" href="../html/login.html"><button>Cerrar Sesión</button></a>';
-} else if (userAdmin) {
-  buttonLog.innerHTML =
+}
+
+if (userAdmin) {
+  buttonAdmin.innerHTML =
     '<a class="nav-link" href="../html/admin.html"><button>Pagina de Admin</button></a>';
 }
 
+buttonLog.addEventListener("click", function () {
+  localStorage.removeItem("user");
+});
 const productos = localData || [
   {
     id: generarID(),
