@@ -25,6 +25,9 @@ button.addEventListener("click", (event) => {
 buttonHome.addEventListener("click", function () {
   localStorage.removeItem("userAdmin");
 });
+button.addEventListener("click", function () {
+  localStorage.removeItem("userAdmin");
+});
 
 // Generar username aleatorio
 function generarUsername() {
