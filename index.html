@@ -1,257 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rolling-Tek</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/headerstyles.css" />
-    <link rel="stylesheet" href="./css/inicio.css" />
-    <link rel="stylesheet" href="./js/inicio.js" />
-    <script
-      src="https://kit.fontawesome.com/712575d4a5.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!-- Comienzo navbar -->
-    <header class="fixed-top position-sticky">
-      <nav class="navbar navbar-dark navbar-expand-lg px-2">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html"
-            ><img
-              style="width: 180px"
-              src="../headerimages/logotekheader.png"
-              alt=""
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rolling-Teck</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+			crossorigin="anonymous"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/headerstyles.css" />
+		<link rel="stylesheet" href="./css/inicio.css" />
+		<link rel="stylesheet" href="./js/inicio.js" />
+	</head>
+	<body>
+		<!-- Comienzo navbar -->
+		<header class="fixed-top position-sticky">
+			<nav class="navbar navbar-dark navbar-expand-lg px-2">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="../index.html"
+						><img
+							style="width: 180px"
+							src="../headerimages/logotekheader.png"
+							alt=""
+					/></a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
-          <div
-            class="menu collapse navbar-collapse text-center"
-            id="navbarSupportedContent"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html"
-                  ><button>Inicio</button></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./html/error.html"
-                  ><button>Armá tu PC</button></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./html/aboutUs.html"
-                  ><button>Nosotros</button></a
-                >
-              </li>
-              <li class="nav-item" id="login-register">
-                <a class="nav-link" href="./html/login.html"
-                  ><button>Iniciar Sesión</button></a
-                >
-              </li>
-              <li class="nav-item" id="pag-admin"></li>
-            </ul>
-          </div>
-        </div>
-        <div class="search d-flex">
-          <div class="searching me-2">
-            <input type="text" placeholder="Buscar" required />
-            <a href="">
-              <div class="lupa">
-                <i class="fas fa-search icon"></i>
-              </div>
-            </a>
-          </div>
-          <div class="car me-5">
-            <a href="./html/carrito.html"
-              ><img
-                src="../headerimages/carrito.png"
-                alt=""
-                style="width: 28px"
-            /></a>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- FIN NAVBAR -->
-    <!-- ------ CARRUSEL----- -->
-    <div class="carrusel">
-      <div
-        id="carouselExampleControls"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="https://www.gezatek.com.ar/uploads/17-02-2023-01-02-39-banner-giga.png"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://www.gezatek.com.ar/uploads/03-11-2022-09-11-58-10-07-2022-10-07-08-21-06-2022-09-06-27-05-06-2022-10-06-57-06-04-2022-01-04-55-Banner1.png"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://www.gezatek.com.ar/uploads/03-11-2022-09-11-15-31-08-2022-05-08-39-1a.png"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
+					<div
+						class="menu collapse navbar-collapse text-center"
+						id="navbarSupportedContent"
+					>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#"><button>Productos</button></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#"><button>Armá tu PC</button></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./html/aboutUs.html"
+									><button>Nosotros</button></a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./html/login.html"
+									><button>Iniciar Sesión</button></a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="search d-flex">
+					<div class="searching me-2">
+						<input type="text" placeholder="Buscar" required />
+						<a href="">
+							<div class="lupa">
+								<i class="fas fa-search icon"></i>
+							</div>
+						</a>
+					</div>
+					<div class="car me-5">
+						<a href=""
+							><img
+								src="../headerimages/carrito.png"
+								alt=""
+								style="width: 28px"
+						/></a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!-- FIN NAVBAR -->
+		<!-- ------ CARRUSEL----- -->
+		<div class="carrusel">
+			<div
+				id="carouselExampleControls"
+				class="carousel slide"
+				data-bs-ride="carousel"
+			>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img
+							src="https://www.gezatek.com.ar/uploads/17-02-2023-01-02-39-banner-giga.png"
+							class="d-block w-100"
+							alt="..."
+						/>
+					</div>
+					<div class="carousel-item">
+						<img
+							src="https://www.gezatek.com.ar/uploads/03-11-2022-09-11-58-10-07-2022-10-07-08-21-06-2022-09-06-27-05-06-2022-10-06-57-06-04-2022-01-04-55-Banner1.png"
+							class="d-block w-100"
+							alt="..."
+						/>
+					</div>
+					<div class="carousel-item">
+						<img
+							src="https://www.gezatek.com.ar/uploads/03-11-2022-09-11-15-31-08-2022-05-08-39-1a.png"
+							class="d-block w-100"
+							alt="..."
+						/>
+					</div>
+				</div>
+				<button
+					class="carousel-control-prev"
+					type="button"
+					data-bs-target="#carouselExampleControls"
+					data-bs-slide="prev"
+				>
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button
+					class="carousel-control-next"
+					type="button"
+					data-bs-target="#carouselExampleControls"
+					data-bs-slide="next"
+				>
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</div>
 
-    <!-- ---- PRODUCTOS PRINCIPALES----- -->
+		<!-- ---- PRODUCTOS PRINCIPALES----- -->
 
-    <div class="ingresos">
-      <div class="ultimos-ingresos">
-        <h2>Nuestros Productos</h2>
-      </div>
-    </div>
+		<div id="cards_productos" class="cards cards_productos">
+			<div class="card" style="width: 18rem">
+				<img src="" class="card-img-top" alt="..." />
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<div class="cards__precio-agregar">
+						<span class="precio" id="precio"></span>
+					</div>
+					<div class="stock" id="stock">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <div id="cards_productos" class="cards cards_productos"></div>
+		<!-- ----- ULTIMOS INGRESOS----- -->
 
-    <!-- ----- ULTIMOS INGRESOS----- -->
+		<div class="ingresos">
+			<div class="ultimos-ingresos">
+				<h2>Últimos Ingresos</h2>
+			</div>
 
-    <div class="ingresos">
-      <div class="ultimos-ingresos">
-        <h2>Últimos Ingresos</h2>
-      </div>
+			<!-- CARDS ULTIMOS INGRESOS -->
 
-      <!-- CARDS ULTIMOS INGRESOS -->
+			<div class="cards cards_ingresos" id="cards_ingresos">
+				<div class="d-flex align-self-stretch">
+					<div class="card" style="width: 18rem">
+						<img src="" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<div class="cards__precio-agregar">
+								<span class="precio" id="precio"></span>
+							</div>
+							<div class="stock" id="stock">
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-      <div class="cards cards_ingresos" id="cards_ingresos"></div>
-    </div>
+		<!-- COMIENZO FOOTER -->
+		<footer class="foot">
+			<div class="d-flex justify-content-around row text-center me-0">
+				<div class="col-lg-4 col-sm-12">
+					<h5 class="text-white mt-4">Contacto</h5>
+					<div class="d-flex justify-content-center mt-2">
+						<p class="text-white fw-bold me-1">Dirección:</p>
+						<i class="text-white ms-2">Mendoza 573</i>
+					</div>
+					<div class="d-flex justify-content-center">
+						<p class="text-white fw-bold ms-3">Teléfono:</p>
+						<i class="text-white ms-2">(0381) - 4223344</i>
+					</div>
+					<div class="d-flex justify-content-center">
+						<p class="text-white fw-bold ms-4">E-Mail:</p>
+						<i class="text-white ms-2">rollingtek@gmail.com</i>
+					</div>
+					<iframe
+						class="rounded"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222.52344740931522!2d-65.205114854764!3d-26.82801747764202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c10dbadd7cd%3A0xac551c19b9ebb3da!2sPcia%20de%20Mendoza%20573%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses!2sar!4v1677629760172!5m2!1ses!2sar"
+						width="250"
+						height="100"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+					></iframe>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<div class="mt-1">
+						<img
+							src="../headerimages/logotekfooter.png"
+							style="width: 200px"
+							alt=""
+						/>
+					</div>
+					<div class="text-center pb-2">
+						<a href=""
+							><img
+								src="../headerimages/wappblanco.png"
+								style="width: 40px"
+								alt=""
+						/></a>
+						<a href=""
+							><img
+								src="../headerimages/facebookblanco.png"
+								style="width: 40px"
+								alt=""
+						/></a>
+						<a href=""
+							><img
+								src="../headerimages/instablanco.png"
+								style="width: 40px"
+								alt=""
+						/></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<h5 class="text-white mt-4 mb-3">Información</h5>
+					<a href=""><p class="text-white">Medios de Pago</p></a>
+					<a href=""><p class="text-white">Libro de Quejas</p></a>
+					<a href=""><p class="text-white">FAQ</p></a>
+					<a href=""><p class="text-white">Trabajá con Nosotros</p></a>
+					<a href=""><p class="text-white">Política de Privacidad</p></a>
+				</div>
+			</div>
+			<div class="copy text-white d-flex justify-content-center mt-3">
+				<p class="fw-bold me-1">©RollingCode 2023</p>
+				<i>- Todos los derechos reservados</i>
+			</div>
+		</footer>
+		<!-- FIN FOOTER -->
 
-    <!-- COMIENZO FOOTER -->
-    <footer class="foot">
-      <div class="d-flex justify-content-around row text-center me-0">
-        <div class="col-lg-4 col-sm-12">
-          <h5 class="text-white mt-4">Contacto</h5>
-          <div class="d-flex justify-content-center mt-2">
-            <p class="text-white fw-bold me-1">Dirección:</p>
-            <i class="text-white ms-2">Mendoza 573</i>
-          </div>
-          <div class="d-flex justify-content-center">
-            <p class="text-white fw-bold ms-3">Teléfono:</p>
-            <i class="text-white ms-2">(0381) - 4223344</i>
-          </div>
-          <div class="d-flex justify-content-center">
-            <p class="text-white fw-bold ms-4">E-Mail:</p>
-            <i class="text-white ms-2">rollingtek@gmail.com</i>
-          </div>
-          <iframe
-            class="rounded"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222.52344740931522!2d-65.205114854764!3d-26.82801747764202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c10dbadd7cd%3A0xac551c19b9ebb3da!2sPcia%20de%20Mendoza%20573%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses!2sar!4v1677629760172!5m2!1ses!2sar"
-            width="250"
-            height="100"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div class="col-lg-4 col-sm-12">
-          <div class="mt-1">
-            <img
-              src="../headerimages/logotekfooter.png"
-              style="width: 200px"
-              alt=""
-            />
-          </div>
-          <div class="text-center pb-2">
-            <a href=""
-              ><img
-                src="../headerimages/wappblanco.png"
-                style="width: 40px"
-                alt=""
-            /></a>
-            <a href=""
-              ><img
-                src="../headerimages/facebookblanco.png"
-                style="width: 40px"
-                alt=""
-            /></a>
-            <a href=""
-              ><img
-                src="../headerimages/instablanco.png"
-                style="width: 40px"
-                alt=""
-            /></a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-12">
-          <h5 class="text-white mt-4 mb-3">Información</h5>
-          <a href=""><p class="text-white">Medios de Pago</p></a>
-          <a href=""><p class="text-white">Libro de Quejas</p></a>
-          <a href=""><p class="text-white">FAQ</p></a>
-          <a href=""><p class="text-white">Trabajá con Nosotros</p></a>
-          <a href=""><p class="text-white">Política de Privacidad</p></a>
-        </div>
-      </div>
-      <div class="copy text-white d-flex justify-content-center mt-3">
-        <p class="fw-bold me-1">©RollingCode 2023</p>
-        <i>- Todos los derechos reservados</i>
-      </div>
-    </footer>
-    <!-- FIN FOOTER -->
+		<!-- SCRIPTS -->
 
-    <!-- SCRIPTS -->
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/inicio.js"></script>
-    <!-- FIN SCRIPTS -->
-  </body>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+			crossorigin="anonymous"
+		></script>
+		<script src="./js/inicio.js"></script>
+	</body>
 </html>
