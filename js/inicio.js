@@ -184,46 +184,71 @@ cards.innerHTML = "";
 productos.forEach((producto) => {
   const html = `
 	
-    <div id="card" class="card d-flex align-self-stretch" >
-    <img
-        src="${producto.imagen}"
-        class="card-img-top"
-        alt="${producto.titulo}"
-    />
-    <div class="card-body">
-        <h5 class="card-title">${producto.titulo}</h5>
-        
-				<div class="cards__precio-agregar">
-				<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Descripción
-</button>
+  <div id="card" class="card d-flex align-self-stretch">
+  <img
+    src="${producto.imagen}"
+    class="card-img-top"
+    alt="${producto.titulo}"
+  />
+  <div class="card-body">
+    <h5 class="card-title">${producto.titulo}</h5>
 
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel"> ${producto.titulo} </h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="cards__precio-agregar">
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        Descripción
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                ${producto.titulo}
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">${producto.descripcion}</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button type="button" class="btn btn-primary">
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        ${producto.descripcion}
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Agregar al carrito</button>
-      </div>
+      <span class="precio" id="precio">$${producto.precio}</span>
+    </div>
+    <div class="stock" id="stock">
+      <p id="stockMessage">Hay stock</p>
     </div>
   </div>
-</div>
-				<span class="precio" id="precio">$${producto.precio}</span>
-				
-			</div>
-			<div class="stock" id="stock">
-				<p id= "stockMessage"> Hay stock </p>
-			</div>
-    </div>
 </div>
 `;
 
@@ -322,31 +347,28 @@ nuevosIngresos.innerHTML = "";
 productosNuevos.forEach((productoNuevo) => {
   const nuevos = `
 	
-	<a href="./pagina-detalle" target= "blank">
-					<div class="d-flex align-self-stretch">
-						<div class="card">
-							<img
-								src="${productoNuevo.imagen} "
-								class="card-img-top"
-								alt="${productoNuevo.titulo} "
-							/>
-							<div class="card-body">
-								<h5 class="card-title">${productoNuevo.titulo} </h5>
-								<p class="card-text">
-									${productoNuevo.descripcion}
-								</p>
-								<div class="cards__precio-agregar">
-									<a href="#" class="btn btn-primary">Agregar</a>
-									<span class="precio" id="precio">$${productoNuevo.precio}</span>
-								</div>
-								<div class="stock" id="stock">
-									<p>Hay Stock</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-</a>
+	<a href="./pagina-detalle" target="blank">
+        <div class="d-flex align-self-stretch">
+          <div class="card">
+            <img
+              src="${productoNuevo.imagen} "
+              class="card-img-top"
+              alt="${productoNuevo.titulo} "
+            />
+            <div class="card-body">
+              <h5 class="card-title">${productoNuevo.titulo}</h5>
+              <p class="card-text">${productoNuevo.descripcion}</p>
+              <div class="cards__precio-agregar">
+                <a href="#" class="btn btn-primary">Agregar</a>
+                <span class="precio" id="precio">$${productoNuevo.precio}</span>
+              </div>
+              <div class="stock" id="stock">
+                <p>Hay Stock</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
 				`;
   nuevosIngresos.innerHTML += nuevos;
 
