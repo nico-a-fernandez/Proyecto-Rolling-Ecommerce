@@ -4,7 +4,7 @@ const userAdmin = JSON.parse(localStorage.getItem("userAdmin"));
 const buttonLog = document.getElementById("login-register");
 const buttonAdmin = document.getElementById("pag-admin");
 
-if (userInvitado) {
+if (userInvitado || userAdmin) {
   buttonLog.innerHTML =
     '<a class="nav-link" href="../html/login.html"><button>Cerrar Sesión</button></a>';
 }
