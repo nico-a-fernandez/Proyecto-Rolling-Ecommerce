@@ -9,6 +9,7 @@ const botonEliminar = document.getElementById("buttonEliminar");
 
 // Traigo los elementos guardados en el local storage
 const userAdmin = JSON.parse(localStorage.getItem("userAdmin"));
+const userInvitado = JSON.parse(localStorage.getItem("user"));
 const localData = JSON.parse(localStorage.getItem("productos"));
 const productos = localData || [];
 
@@ -91,3 +92,28 @@ function editStock(id) {
 
   mostrarProductos();
 }
+
+// Generar la card del usuario
+const cardUsuario = `
+  <div class="card">
+    <div class="card-header">
+      <h3>${userInvitado.name} ${userInvitado.lastname}</h3>
+    </div>
+    <div class="card-body">
+      <p><strong>Nombre de usuario:</strong> ${userInvitado.username}</p>
+      <p><strong>Correo electrónico:</strong> ${userInvitado.email}</p>
+      <p><strong>Pass:</strong> ${userInvitado.password}</p>
+    </div>
+    <button id="buttonTrash" onclick="eliminarUser()" class="btn btn-danger">Eliminar</button>
+  </div>
+`;
+
+// Insertar la tarjeta del usuario en la página web
+document.getElementById("cardUser").innerHTML = cardUsuario;
+
+// Eliminar user
+
+const buttonDelete = document.getElementById("buttonTrash");
+buttonDelete.addEventListener("click", function eliminarUser() {
+  localStorage.removeItem("user");
+});
