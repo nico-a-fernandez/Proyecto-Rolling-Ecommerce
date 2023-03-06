@@ -1,4 +1,5 @@
 const localData = JSON.parse(localStorage.getItem("productos"));
+const localData2 = JSON.parse(localStorage.getItem("productosIngreso"));
 const userInvitado = JSON.parse(localStorage.getItem("user"));
 const userAdmin = JSON.parse(localStorage.getItem("userAdmin"));
 const buttonLog = document.getElementById("login-register");
@@ -280,7 +281,7 @@ productos.forEach((producto) => {
 
 // PARA PRODUCTOS DE "ULTIMO INGRESO"
 
-const productosNuevos = [
+const productosNuevos = localData2 || [
   {
     id: generarID(),
     imagen:
