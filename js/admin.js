@@ -52,9 +52,10 @@ function mostrarProductos() {
               <h5 class="card-title">${producto.titulo}</h5>
               <p id="price" class="card-text">$  ${producto.precio}</p>
               <div class="card-footer text-center text-decoration-none">Stock: ${producto.stock}</div>
-              <a href="../html/carrito.html" class="btn btn-primary">Agregar al carrito</a>
+              
               <button onclick="eliminarProducto('${producto.id}')" class="btn btn-danger">Eliminar</button>
               <button onclick="editPrice('${producto.id}')" class="btn btn-warning">Editar precio</button>
+              <button onclick="editStock('${producto.id}')" class="btn btn-success">Editar stock</button>
           </div>
         </div>
         `
@@ -76,6 +77,15 @@ function eliminarProducto(id) {
 function editPrice(id) {
   let productoId = productos.findIndex((producto) => producto.id == id);
   productos[productoId].precio = prompt("Ingrese el nuevo precio");
+  const json = JSON.stringify(productos);
+  localStorage.setItem("productos", json);
+
+  mostrarProductos();
+}
+// Editar Stock
+function editStock(id) {
+  let productoId = productos.findIndex((producto) => producto.id == id);
+  productos[productoId].stock = prompt("Ingrese el nuevo stock");
   const json = JSON.stringify(productos);
   localStorage.setItem("productos", json);
 
