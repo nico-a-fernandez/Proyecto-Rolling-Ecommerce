@@ -89,18 +89,32 @@
                   type="text"
                   class="form-control"
                   id="username"
+                  maxlength="15"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombre completo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  maxlength="25"
                   required
                 />
-                <label for="name" class="form-label">Nombre completo</label>
-                <input type="text" class="form-control" id="name" required />
+              </div>
+
+              <div class="mb-3">
                 <label for="lastname" class="form-label">Apellido</label>
                 <input
                   type="text"
                   class="form-control"
                   id="lastname"
+                  maxlength="25"
                   required
                 />
               </div>
+
               <div class="mb-3">
                 <label for="email" class="form-label">Correo electrónico</label>
                 <input
@@ -110,6 +124,7 @@
                   aria-describedby="emailHelp"
                   required
                 />
+                <span id="email_error" style="color: red"></span>
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Contraseña</label>
@@ -119,7 +134,22 @@
                   id="password"
                   required
                   minlength="5"
+                  maxlength="20"
                 />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label"
+                  >Confirmar contraseña</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="passwordConfirm"
+                  required
+                  minlength="5"
+                  maxlength="20"
+                />
+                <span id="password_error" style="color: red"></span>
               </div>
               <div class="mb-3 form-check">
                 <input
