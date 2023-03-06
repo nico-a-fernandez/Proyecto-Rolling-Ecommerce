@@ -1,6 +1,6 @@
 const productos = [
   {
-    id: 1001,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/TzOZXJOIMvac7dZfkXrg/imagen",
     titulo: "Mother MSI MAG Z790 TOMAHAWK WIFI DDR4 (12/13va Gen) LGA1700",
@@ -10,7 +10,7 @@ const productos = [
     stock: 10,
   },
   {
-    id: 1002,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/XbiXvEfNO0b5mYnm5xyp/imagen",
     titulo: "Mother Gigabyte Z690 AORUS ELITE AX WIFI DDR4 (12va Gen) LGA1700",
@@ -19,7 +19,7 @@ const productos = [
     stock: 90,
   },
   {
-    id: 1003,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/RfFTwGNJGXChQSdmvOdP/imagen",
     titulo: "Mother ASUS PRIME Z690-P WIFI D5 DDR5 (12va Gen) LGA1700",
@@ -28,7 +28,7 @@ const productos = [
     stock: 0,
   },
   {
-    id: 1004,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/wjk9CZN86qiiDE7sUMCw/imagen",
     titulo:
@@ -38,7 +38,7 @@ const productos = [
     stock: 150,
   },
   {
-    id: 1005,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/3sQipwKzWo4XIw9Xc0pv/imagen",
     titulo:
@@ -48,7 +48,7 @@ const productos = [
     stock: 0,
   },
   {
-    id: 1006,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/U5cJ7GVQyO8rJv0mNGI6/imagen",
     titulo: "Cooler CPU Cooler Master MasterAir MA610P ARGB Edition Intel/AMD",
@@ -57,7 +57,7 @@ const productos = [
     stock: 95,
   },
   {
-    id: 1007,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/mjN7A4uYOOwJJZMkSND9/imagen",
     titulo:
@@ -67,7 +67,7 @@ const productos = [
     stock: 80,
   },
   {
-    id: 1008,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/vWi45VrvnIC9pBmZEjot/imagen",
     titulo: "Memoria RAM Kingston 16GB DDR4 3200Mhz Fury Beast RGB",
@@ -76,7 +76,7 @@ const productos = [
     stock: 250,
   },
   {
-    id: 1009,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/U5cJ7GVQyO8rJv0mNGI6/imagen",
     titulo: "Cooler CPU Cooler Master MasterAir MA610P ARGB Edition Intel/AMD",
@@ -85,7 +85,7 @@ const productos = [
     stock: 95,
   },
   {
-    id: 1010,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/hFVR44xIYvORqA7OJ4we/imagen",
     titulo: "Memoria RAM Patriot 8GB DDR4 3600Mhz Viper Steel RGB PVSR48G360C0",
@@ -94,7 +94,7 @@ const productos = [
     stock: 75,
   },
   {
-    id: 1011,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/Fe87ZZwp5qIP8ntxtFNG/imagen",
     titulo:
@@ -104,7 +104,7 @@ const productos = [
     stock: 400,
   },
   {
-    id: 1012,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/i6kMZM3nx36nZoovzTaO/imagen",
     titulo: "Placa de Video ASUS NVIDIA GeForce RTX 3070 DUAL OC 8Gb GDDR6 LHR",
@@ -113,7 +113,7 @@ const productos = [
     stock: 95,
   },
   {
-    id: 1013,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/ZVnrW58ijS9GjBf7JGdw/imagen",
     titulo: "Cooler CPU Cooler Master MasterAir MA610P ARGB Edition Intel/AMD",
@@ -122,7 +122,7 @@ const productos = [
     stock: 130,
   },
   {
-    id: 1014,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/Q8kCAoORQ9f29nwXFWDy/imagen",
     titulo: "Fuente Gigabyte P850GM 850W 80 Plus Gold Modular S/Cable",
@@ -131,7 +131,7 @@ const productos = [
     stock: 110,
   },
   {
-    id: 1015,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/qxZCDOPvODAY80idBfAr/imagen",
     titulo: "Disco SSD M2 WD Black 1Tb SN770 5000MB/S NVME",
@@ -140,7 +140,7 @@ const productos = [
     stock: 130,
   },
   {
-    id: 1016,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/vSjGzHuGDHIcxWziCUWH/imagen",
     titulo: "Disco SSD M2 WD Blue 500Gb SN570 NVME",
@@ -149,7 +149,7 @@ const productos = [
     stock: 135,
   },
   {
-    id: 1017,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/Z3FhHdaj9Z6UiiyTh3c7/imagen",
     titulo: "Gabinete Corsair 7000D Airflow Black Full Tower 3x12cm",
@@ -158,7 +158,7 @@ const productos = [
     stock: 0,
   },
   {
-    id: 1018,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/F3nmu7DUHze63hCRvCZM/imagen",
     titulo: "Gabinete Corsair 5000D Airflow White Templado 2x12cm",
@@ -167,6 +167,11 @@ const productos = [
     stock: 2,
   },
 ];
+
+// Generar id aleatorio
+function generarID() {
+  return "_" + Math.random().toString(36).substring(2, 9);
+}
 
 // PARA LOS PRODUCTOS PRINCIPALES
 
@@ -223,30 +228,16 @@ productos.forEach((producto) => {
   cards.innerHTML += html;
 
   function guardarStockPrincipal() {
-    localStorage.setItem("Stock Principal", JSON.stringify(productos));
+    localStorage.setItem("productos", JSON.stringify(productos));
   }
   guardarStockPrincipal();
-
-  function verStockPrincipal() {
-    if (localStorage.getItem("Stock Principal")) {
-      let stockPrincipal = JSON.parse(localStorage.getItem("Stock Principal"));
-      console.log(stockPrincipal);
-    } else console.log("No hay entradas");
-  }
-  verStockPrincipal();
 });
-
-//
-///
 
 // PARA PRODUCTOS DE "ULTIMO INGRESO"
 
-//
-///
-
 const productosNuevos = [
   {
-    id: 2021,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/RfFTwGNJGXChQSdmvOdP/imagen",
     titulo: "Mother ASUS PRIME Z690-P WIFI D5 DDR5 (12va Gen) LGA1700",
@@ -255,7 +246,7 @@ const productosNuevos = [
     stock: 0,
   },
   {
-    id: 2022,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/hU9PMcx3b0RF6BdrxCSj/imagen",
     titulo:
@@ -265,7 +256,7 @@ const productosNuevos = [
     stock: 25,
   },
   {
-    id: 2023,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/aEpcJ4ArsKsNI0yr7VIj/imagen",
     titulo: "Cooler CPU Cooler Master Hyper H411R White LED AMD/Intel",
@@ -274,7 +265,7 @@ const productosNuevos = [
     stock: 300,
   },
   {
-    id: 2024,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/oSUqVhoCIOHuDzvTBIxb/imagen",
     titulo: "Memoria RAM Kingston 4GB DDR4 2666Mhz Value",
@@ -283,7 +274,7 @@ const productosNuevos = [
     stock: 200,
   },
   {
-    id: 2026,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/xJ43SJhGzbXsBkjPC5Bv/imagen",
     titulo:
@@ -293,7 +284,7 @@ const productosNuevos = [
     stock: 100,
   },
   {
-    id: 2027,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/vRUy9kiRVKJPxDHsWpTT/imagen",
     titulo:
@@ -303,7 +294,7 @@ const productosNuevos = [
     stock: 102,
   },
   {
-    id: 2028,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/EpWoKuTW8mPgbyxjr2ZA/imagen",
     titulo: "Disco SSD M2 Kingston 250Gb SNVS NV1 NVME",
@@ -312,7 +303,7 @@ const productosNuevos = [
     stock: 115,
   },
   {
-    id: 2029,
+    id: generarID(),
     imagen:
       "https://s3-sa-east-1.amazonaws.com/saasargentina/eBcr5BG5tKqZzVtTAOha/imagen",
     titulo: "Gabinete AZZA Iris 330 Vidrio Templado 2x12cm ARGB",
@@ -358,20 +349,7 @@ productosNuevos.forEach((productoNuevo) => {
   nuevosIngresos.innerHTML += nuevos;
 
   function guardarStockNuevos() {
-    localStorage.setItem(
-      "Stock Ultimos Ingresos",
-      JSON.stringify(productosNuevos)
-    );
+    localStorage.setItem("productosIngreso", JSON.stringify(productosNuevos));
   }
   guardarStockNuevos();
-
-  function verStockNuevos() {
-    if (localStorage.getItem("Stock Ultimos Ingresos")) {
-      let stockNuevos = JSON.parse(
-        localStorage.getItem("Stock Ultimos Ingresos")
-      );
-      console.log(stockNuevos);
-    } else console.log("No hay entradas");
-  }
-  verStockNuevos();
 });
