@@ -17,6 +17,7 @@ if (userAdmin) {
 buttonLog.addEventListener("click", function () {
   localStorage.removeItem("user");
 });
+
 const productos = localData || [
   {
     id: generarID(),

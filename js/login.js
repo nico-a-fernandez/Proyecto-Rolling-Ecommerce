@@ -1,4 +1,5 @@
 const button = document.getElementById("buttonSubmit");
+const buttonHome = document.getElementById("button-home");
 
 const userAdmin = {
   username: "admin",
@@ -32,4 +33,8 @@ button.addEventListener("click", (event) => {
       alert("Los datos ingresados son incorrectos");
     }
   }
+});
+
+buttonHome.addEventListener("click", function () {
+  localStorage.removeItem("userAdmin");
 });

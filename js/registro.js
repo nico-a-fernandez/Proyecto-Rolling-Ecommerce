@@ -1,4 +1,5 @@
 const button = document.getElementById("buttonSubmit");
+const buttonHome = document.getElementById("button-home");
 
 button.addEventListener("click", (event) => {
   event.preventDefault();
@@ -14,4 +15,8 @@ button.addEventListener("click", (event) => {
   localStorage.setItem("user", JSON.stringify(user));
 
   window.location = "../index.html";
+});
+
+buttonHome.addEventListener("click", function () {
+  localStorage.removeItem("userAdmin");
 });
