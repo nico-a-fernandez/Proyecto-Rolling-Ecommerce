@@ -219,7 +219,7 @@ productos.forEach((producto) => {
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-bs-dismiss="modal" id="btn-fav">Favorito</button>
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Agregar al carrito</button>
+                  <button type="button" class="btn btn-primary botoncarrito" data-bs-dismiss="modal">Agregar al carrito</button>
                 </div>
               </div>
             </div>
@@ -352,7 +352,7 @@ productosNuevos.forEach((productoNuevo) => {
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-bs-dismiss="modal" id="btn-fav">Favorito</button>
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Agregar al carrito</button>
+                  <button type="button" class="btn btn-primary botoncarrito" data-bs-dismiss="modal">Agregar al carrito</button>
                 </div>
               </div>
             </div>
