@@ -17,21 +17,18 @@ button.addEventListener("click", (event) => {
 
   const user = JSON.parse(localStorage.getItem("user"));
 
-  if (user) {
-    if (user.username == username && user.password == password) {
-      user.id = Date.now();
+  if (username == userAdmin.username && password == userAdmin.password) {
+    console.log("Logueado");
 
-      localStorage.setItem("user", JSON.stringify(user));
+    window.location = "../html/admin.html";
+  } else if (user.username == username && user.password == password) {
+    user.id = Date.now();
 
-      window.location = "../index.html";
-    } else if (
-      userAdmin.username == username &&
-      userAdmin.password == password
-    ) {
-      window.location = "../html/admin.html";
-    } else {
-      alert("Los datos ingresados son incorrectos");
-    }
+    localStorage.setItem("user", JSON.stringify(user));
+
+    window.location = "../index.html";
+  } else {
+    alert("Los datos ingresados son incorrectos");
   }
 });
 
