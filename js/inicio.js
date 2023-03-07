@@ -254,7 +254,7 @@ productos.forEach((producto) => {
               >
                 Cerrar
               </button>
-              <button type="button" class="btn btn-primary">
+              <button type="button" class="btn btn-primary botoncarrito">
                 Agregar al carrito
               </button>
             </div>
@@ -377,7 +377,7 @@ productosNuevos.forEach((productoNuevo) => {
               <h5 class="card-title">${productoNuevo.titulo}</h5>
               <p class="card-text">${productoNuevo.descripcion}</p>
               <div class="cards__precio-agregar">
-                <a href="#" class="btn btn-primary">Agregar</a>
+                <a href="#" class="btn btn-primary botoncarrito">Agregar</a>
                 <span class="precio" id="precio">$${productoNuevo.precio}</span>
               </div>
               <div class="stock" id="stock">
