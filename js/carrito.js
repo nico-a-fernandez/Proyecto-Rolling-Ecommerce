@@ -81,11 +81,30 @@ items.forEach((item) => {
 
 	subtotalColumn.textContent = item.price;
 
+	// Create delete button column
+	const deleteBtnColumn = document.createElement("td");
+	const deleteBtn = document.createElement("button");
+	deleteBtn.textContent = "Eliminar";
+	deleteBtn.classList.add("btn", "btn-danger");
+	deleteBtn.addEventListener("click", () => {
+		// Remove the item from the items array
+		items.splice(item, 1);
+
+		// Update the local storage
+		localStorage.setItem("carrito", JSON.stringify(items));
+
+		// Remove the row from the table
+		row.remove();
+		window.location.href = "./carrito.html";
+	});
+	deleteBtnColumn.appendChild(deleteBtn);
+
 	// Append the columns to the row
 	row.appendChild(idColumn);
 	row.appendChild(nameColumn);
 	row.appendChild(priceColumn);
 	row.appendChild(quantityColumn);
+	row.appendChild(deleteBtnColumn);
 
 	// Append the row to the table body
 	tableBody.appendChild(row);
@@ -100,3 +119,11 @@ cart.forEach((item) => {
 
 // Actualiza el contenido del elemento HTML con el total del carrito
 document.getElementById("itemTotal").textContent = `Total $${total}`;
+
+// botonEliminar.addEventListener("click", eliminarProducto());
+
+// function eliminarProducto(id) {
+// 	const productosFiltrados = carrito.filter((item) => item.id !== id);
+// 	const json = JSON.stringify(productosFiltrados);
+// 	localStorage.setItem("carrito", json);
+// 	carrito = productosFiltrados;

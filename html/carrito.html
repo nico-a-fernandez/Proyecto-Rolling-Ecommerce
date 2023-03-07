@@ -100,14 +100,15 @@
 		<!-- FIN NAVBAR -->
 		<!-- COMIENZO CARRITO -->
 		<main>
-			<div class="d-flex justify-content-center">
-				<table class="table w-50 text-center" id="table">
+			<div class="table-responsive">
+				<table class="table table-sm text-center align-middle" id="table">
 					<thead>
 						<tr>
 							<th scope="col">#</th>
 							<th scope="col">Productos</th>
 							<th scope="col">Precio</th>
 							<th scope="col">Cantidad</th>
+							<th scope="col">Eliminar</th>
 						</tr>
 					</thead>
 					<tbody class="tbody" id="cartTable">
@@ -116,15 +117,14 @@
 							<td class="rowBody" id="rowBody"></td>
 							<td class="rowBody" id="rowBody"></td>
 							<td class="rowBody" id="rowBody"></td>
+							<td class="rowBody" id="botonEliminar"></td>
 						</tr>
 					</tbody>
 				</table>
-			</div>
-			<div class="row mx-4 mt-2">
-				<div class="col d-flex justify-content-end">
+
+				<div class="col total-comprar">
 					<h3 class="itemCardTotal" id="itemTotal">Total $</h3>
-				</div>
-				<div class="col d-flex justify-content-start">
+
 					<a href="../html/error.html"
 						><button class="btn btn-success">COMPRAR</button></a
 					>
