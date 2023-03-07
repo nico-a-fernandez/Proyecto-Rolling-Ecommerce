@@ -65,7 +65,7 @@ td {
 	z-index: 0;
 }
 
-@media (min-width: 798px) {
+/* @media (min-width: 798px) {
 	main {
 		display: flex;
 		flex-direction: column;
@@ -77,5 +77,27 @@ td {
 	thead > th {
 		margin: 0;
 		gap: 0;
+	}
+} */
+
+@media screen and (max-width: 576px) {
+	.table-responsive {
+		overflow-x: auto;
+	}
+	.table-sm {
+		font-size: 0.8rem;
+	}
+	.rowBody {
+		display: block;
+		text-align: center;
+	}
+	.rowBody:before {
+		content: attr(data-label);
+		float: left;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.rowBody:last-child {
+		margin-bottom: 1rem;
 	}
 }
