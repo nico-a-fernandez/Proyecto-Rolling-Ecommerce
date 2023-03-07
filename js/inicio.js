@@ -200,11 +200,15 @@ cards.innerHTML = "";
 productos.forEach((producto) => {
   const html = `
     <div id="card-${producto.id}" class="card d-flex align-self-stretch">
-      <img src="${producto.imagen}" class="card-img-top" alt="${producto.titulo}" />
+      <img src="${producto.imagen}" class="card-img-top" alt="${
+    producto.titulo
+  }" />
       <div class="card-body">
         <h5 class="card-title">${producto.titulo}</h5>
         <div class="cards__precio-agregar">
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-${producto.id}">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-${
+            producto.id
+          }">
             Descripción
           </button>
           <div id="modal-${producto.id}" class="modal fade" tabindex="-1">
@@ -215,7 +219,9 @@ productos.forEach((producto) => {
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <p>${producto.descripcion}<br /><br />ID del producto: ${producto.id}.<br />${producto.stock} productos disponibles</p>
+                  <p>${producto.descripcion}<br /><br />ID del producto: ${
+    producto.id
+  }.<br />${producto.stock} productos disponibles</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-bs-dismiss="modal" id="btn-fav">Favorito</button>
@@ -227,7 +233,9 @@ productos.forEach((producto) => {
           <span class="precio" id="precio">$${producto.precio}</span>
         </div>
         <div class="stock" id="stock">
-          <p id="stockMessage">Hay stock</p>
+        <p id="stockMessage">${
+          producto.stock > 0 ? "Hay stock" : "No hay stock"
+        }</p>
         </div>
       </div>
     </div>
@@ -333,11 +341,15 @@ nuevosIngresos.innerHTML = "";
 productosNuevos.forEach((productoNuevo) => {
   const nuevos = `
     <div id="card-${productoNuevo.id}" class="card d-flex align-self-stretch">
-      <img src="${productoNuevo.imagen}" class="card-img-top" alt="${productoNuevo.titulo}" />
+      <img src="${productoNuevo.imagen}" class="card-img-top" alt="${
+    productoNuevo.titulo
+  }" />
       <div class="card-body">
         <h5 class="card-title">${productoNuevo.titulo}</h5>
         <div class="cards__precio-agregar">
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-${productoNuevo.id}">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-${
+            productoNuevo.id
+          }">
             Descripción
           </button>
           <div id="modal-${productoNuevo.id}" class="modal fade" tabindex="-1">
@@ -348,7 +360,9 @@ productosNuevos.forEach((productoNuevo) => {
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <p>${productoNuevo.descripcion}<br /><br />ID del producto: ${productoNuevo.id}.<br />${productoNuevo.stock} productos disponibles</p>
+                  <p>${productoNuevo.descripcion}<br /><br />ID del producto: ${
+    productoNuevo.id
+  }.<br />${productoNuevo.stock} productos disponibles</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-bs-dismiss="modal" id="btn-fav">Favorito</button>
@@ -360,7 +374,9 @@ productosNuevos.forEach((productoNuevo) => {
           <span class="precio" id="precio">$${productoNuevo.precio}</span>
         </div>
         <div class="stock" id="stock">
-          <p id="stockMessage">Hay stock</p>
+        <p id="stockMessage">${
+          productoNuevo.stock > 0 ? "Hay stock" : "No hay stock"
+        }</p>
         </div>
       </div>
     </div>
