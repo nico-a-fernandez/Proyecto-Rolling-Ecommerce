@@ -1,3 +1,4 @@
+/*
 const Clickbutton = document.querySelectorAll(".botoncarrito");
 const tbody = document.querySelector(".tbody");
 let carrito = [];
@@ -122,3 +123,62 @@ window.onload = function () {
     renderCarrito();
   }
 };
+*/
+// Selección de todos los botones "Agregar al carrito"
+// Selección del botón "Agregar al carrito"
+// Selección de todos los botones "Agregar al carrito"
+// Selección de todos los botones "Agregar al carrito"
+const botonesAgregar = document.querySelectorAll(".botoncarrito");
+
+botonesAgregar.forEach((botonAgregar) => {
+  botonAgregar.addEventListener("click", (event) => {
+    // Obtener el ID del botón
+    const idBoton = event.target.id;
+
+    // Obtener el ID del producto desde el ID del botón
+    const idProducto = idBoton.substring(idBoton.indexOf("-") + 1);
+
+    // Buscar el producto correspondiente en el array "productos"
+    const productos = JSON.parse(localStorage.getItem("productos")) || [];
+    const producto = productos.find((p) => p.id === idProducto);
+
+    if (producto) {
+      // Crear el nuevo array "carrito" si no existe, o agregar el producto al final del mismo
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      carrito.push(producto);
+
+      // Guardar el nuevo array "carrito" en el LocalStorage
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+
+      // Mostrar mensaje de confirmación
+      alert("El producto ha sido agregado al carrito.");
+    }
+  });
+});
+
+botonesAgregar.forEach((botonAgregar) => {
+  botonAgregar.addEventListener("click", (event) => {
+    // Obtener el ID del botón
+    const idBoton = event.target.id;
+
+    // Obtener el ID del producto desde el ID del botón
+    const idProducto = idBoton.substring(idBoton.indexOf("-") + 1);
+
+    // Buscar el producto correspondiente en el array "productos"
+    const productosIngreso =
+      JSON.parse(localStorage.getItem("productosIngreso")) || [];
+    const producto = productosIngreso.find((p) => p.id === idProducto);
+
+    if (producto) {
+      // Crear el nuevo array "carrito" si no existe, o agregar el producto al final del mismo
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      carrito.push(producto);
+
+      // Guardar el nuevo array "carrito" en el LocalStorage
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+
+      // Mostrar mensaje de confirmación
+      alert("El producto ha sido agregado al carrito.");
+    }
+  });
+});
