@@ -64,3 +64,14 @@ td {
 	width: 100vw;
 	z-index: 0;
 }
+
+@media (min-width: 798px) {
+	main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		min-height: 50vh;
+	}
+}
