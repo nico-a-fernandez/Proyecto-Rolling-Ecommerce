@@ -17,7 +17,7 @@
       src="https://kit.fontawesome.com/712575d4a5.js"
       crossorigin="anonymous"
     ></script>
-    <title>Rolling-Tek - ADMIN</title>
+    <title>Rolling-Tek ADMIN</title>
   </head>
   <body>
     <!-- Comienzo navbar -->
@@ -71,62 +71,59 @@
     <h1 class="text-center mt-5">Pagina de Administracion</h1>
 
     <!-- Inicio Form agregar producto -->
-    <div>
-      <form class="w-75 mx-auto mt-5" id="formProductos">
-        <div class="mb-3">
-          <label for="inputTitle" class="form-label">Nombre del producto</label>
-          <input
-            required
-            type="text"
-            class="form-control"
-            id="inputTitle"
-            aria-describedby="emailHelp"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="inputPrice" class="form-label">Precio</label>
-          <span>ARS$</span>
-          <input
-            required
-            type="number"
-            min="0"
-            class="form-control"
-            id="inputPrice"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="inputPrice" class="form-label">Stock</label>
-          <input
-            required
-            type="number"
-            min="0"
-            class="form-control"
-            id="inputStock"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="inputImg" class="form-label">Imagen</label>
-          <input required type="text" class="form-control" id="inputImg" />
-        </div>
-        <button type="submit" class="btn btn-primary">Cargar</button>
-      </form>
-    </div>
+    <form class="w-75 mx-auto mt-5" id="formProductos">
+      <div class="mb-3">
+        <label for="inputTitle" class="form-label">Nombre del producto</label>
+        <input
+          required
+          type="text"
+          class="form-control"
+          id="inputTitle"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="inputPrice" class="form-label">Precio</label>
+        <span>ARS$</span>
+        <input
+          required
+          type="number"
+          min="0"
+          class="form-control"
+          id="inputPrice"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="inputPrice" class="form-label">Stock</label>
+        <input
+          required
+          type="number"
+          min="0"
+          class="form-control"
+          id="inputStock"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="inputImg" class="form-label">Imagen</label>
+        <input required type="text" class="form-control" id="inputImg" />
+      </div>
+      <button type="submit" class="btn btn-primary">Cargar</button>
+    </form>
     <!-- Fin form agregar producto -->
 
     <h1 class="mt-5 mb-5 text-center">Productos</h1>
 
-    <div
-      class="d-flex justify-content-center flex-wrap"
-      id="cardProducto"
-    ></div>
-    <div
-      class="d-flex justify-content-center flex-wrap"
-      id="cardProducto2"
-    ></div>
-
-    <h1 class="mt-5 mb-5 text-center">Users</h1>
-
-    <div class="d-flex justify-content-center flex-wrap" id="cardUser"></div>
+    <div class="d-flex justify-content-center flex-wrap" id="cardProducto">
+      <!-- <div class="card d-none" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+      </div> -->
+    </div>
 
     <!-- Scripts -->
     <script

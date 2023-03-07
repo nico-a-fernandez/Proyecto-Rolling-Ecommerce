@@ -4,24 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="../css/style-login.css" />
-    <link rel="stylesheet" href="../css/headerstyles.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap"
       rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../css/carrito.css" />
+    <link rel="stylesheet" href="../css/headerstyles.css" />
     <script
       src="https://kit.fontawesome.com/712575d4a5.js"
       crossorigin="anonymous"
     ></script>
-
-    <title>Rolling-Teck REGISTER</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
   </head>
-  <body class="main">
-    <!-- Comienzo navbar -->
+  <body>
+    <!-- COMIENZA NAVBAR-->
     <header class="fixed-top position-sticky">
       <nav class="navbar navbar-dark navbar-expand-lg px-2">
         <div class="container-fluid">
@@ -48,107 +52,76 @@
             id="navbarSupportedContent"
           >
             <ul class="navbar-nav">
-              <li class="nav-item" id="button-home">
+              <li class="nav-item">
                 <a class="nav-link" href="../index.html"
                   ><button>Inicio</button></a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./error.html"
+                <a class="nav-link" href="../html/error.html"
                   ><button>Armá tu PC</button></a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./aboutUs.html"
+                <a class="nav-link" href="../html/aboutUs.html"
                   ><button>Nosotros</button></a
                 >
               </li>
+              <li class="nav-item" id="login-register">
+                <a class="nav-link" href="../html/login.html"
+                  ><button>Iniciar Sesión</button></a
+                >
+              </li>
+              <li class="nav-item" id="pag-admin"></li>
             </ul>
+          </div>
+        </div>
+        <div class="search d-flex">
+          <div class="searching me-2">
+            <input type="text" placeholder="Buscar" required />
+            <a href="">
+              <div class="lupa">
+                <i class="fas fa-search icon"></i>
+              </div>
+            </a>
+          </div>
+          <div class="car me-5">
+            <a href="./html/carrito.html"
+              ><img
+                src="../headerimages/carrito.png"
+                alt=""
+                style="width: 28px"
+            /></a>
           </div>
         </div>
       </nav>
     </header>
     <!-- FIN NAVBAR -->
-    <!-- INICIO POPUP LOGIN -->
-    <section class="cosa">
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col d-none d-md-block"></div>
-
-          <!-- INICIO DEL FORM -->
-          <div class="col col-lg-4 col-md-8 login">
-            <div class="text-end"></div>
-            <h1 class="fw-bold text-center py-10">Bienvenido</h1>
-
-            <form action="">
-              <div class="mb-3">
-                <label for="username" class="form-label"
-                  >Nombre de usuario</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="username"
-                  required
-                />
-                <label for="name" class="form-label">Nombre completo</label>
-                <input type="text" class="form-control" id="name" required />
-                <label for="lastname" class="form-label">Apellido</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="lastname"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="correo"
-                  aria-describedby="emailHelp"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="password" class="form-label">Contraseña</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  required
-                  minlength="5"
-                />
-              </div>
-              <div class="mb-3 form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1"
-                  >Mantenerme conectado</label
-                >
-              </div>
-              <div class="d-grid">
-                <button type="submit" class="btn btn-primary" id="buttonSubmit">
-                  Registrarse
-                </button>
-              </div>
-              <div class="texti my-3">
-                <p>¿Ya tienes cuenta? <a href="login.html">Inicia Sesión</a></p>
-              </div>
-            </form>
-          </div>
-          <!-- FIN DEL FORM -->
-
-          <div class="col d-none d-md-block"></div>
+    <!-- COMIENZO CARRITO -->
+    <main>
+      <div class="d-flex justify-content-center">
+        <table class="table w-50 text-center">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Productos</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody class="tbody"></tbody>
+        </table>
+      </div>
+      <div class="row mx-4 mt-2">
+        <div class="col d-flex justify-content-end">
+          <h3 class="itemCardTotal">Total $ 0</h3>
+        </div>
+        <div class="col d-flex justify-content-start">
+          <button class="btn btn-success">COMPRAR</button>
         </div>
       </div>
-    </section>
-    <!-- FIN POPUP LOGIN -->
-
+    </main>
+    <!-- FIN CARRITO -->
     <!-- COMIENZO FOOTER -->
     <footer class="foot">
       <div class="d-flex justify-content-around row text-center me-0">
@@ -186,19 +159,19 @@
             />
           </div>
           <div class="text-center pb-2">
-            <a href=""
+            <a href="../html/error.html"
               ><img
                 src="../headerimages/wappblanco.png"
                 style="width: 40px"
                 alt=""
             /></a>
-            <a href=""
+            <a href="../html/error.html"
               ><img
                 src="../headerimages/facebookblanco.png"
                 style="width: 40px"
                 alt=""
             /></a>
-            <a href=""
+            <a href="../html/error.html"
               ><img
                 src="../headerimages/instablanco.png"
                 style="width: 40px"
@@ -208,11 +181,19 @@
         </div>
         <div class="col-lg-4 col-sm-12">
           <h5 class="text-white mt-4 mb-3">Información</h5>
-          <a href=""><p class="text-white">Medios de Pago</p></a>
-          <a href=""><p class="text-white">Libro de Quejas</p></a>
-          <a href=""><p class="text-white">FAQ</p></a>
-          <a href=""><p class="text-white">Trabajá con Nosotros</p></a>
-          <a href=""><p class="text-white">Política de Privacidad</p></a>
+          <a href="../html/error.html"
+            ><p class="text-white">Medios de Pago</p></a
+          >
+          <a href="../html/error.html"
+            ><p class="text-white">Libro de Quejas</p></a
+          >
+          <a href="../html/error.html"><p class="text-white">FAQ</p></a>
+          <a href="../html/error.html"
+            ><p class="text-white">Trabajá con Nosotros</p></a
+          >
+          <a href="../html/error.html"
+            ><p class="text-white">Política de Privacidad</p></a
+          >
         </div>
       </div>
       <div class="copy text-white d-flex justify-content-center mt-3">
@@ -222,14 +203,17 @@
     </footer>
     <!-- FIN FOOTER -->
 
-    <!-- INICIO SCRIPTS -->
+    <!-- SCRIPTS -->
+    <script src="../js/carrito.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
       crossorigin="anonymous"
     ></script>
-    <script src="../js/registro.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <!-- FIN SCRIPTS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
