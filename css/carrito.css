@@ -71,7 +71,11 @@ td {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-
 		min-height: 50vh;
+	}
+
+	thead > th {
+		margin: 0;
+		gap: 0;
 	}
 }
