@@ -12,7 +12,23 @@ if (userInvitado || userAdmin) {
 
 if (userAdmin) {
   buttonAdmin.innerHTML =
-    '<a class="nav-link" href="../html/admin.html"><button>Pagina de Admin</button></a>';
+    "<a class=nav-link><button>Pagina de Admin</button></a>";
+  buttonAdmin.addEventListener("click", function () {
+    // Solicitar la contraseña al usuario
+    const password = prompt(
+      "Por favor ingrese la contraseña del usuarioAdmin:"
+    );
+
+    // Verificar si la contraseña es correcta
+    if (password === userAdmin.password) {
+      // Redirigir al usuario a la página de administración
+      window.location.href = "../html/admin.html";
+    } else {
+      // Contraseña incorrecta, redirigir al usuario a la página de inicio
+      alert("Contraseña incorrecta");
+      window.location.href = "../index.html";
+    }
+  });
 }
 
 buttonLog.addEventListener("click", function () {
