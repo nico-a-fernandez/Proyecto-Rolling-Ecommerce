@@ -27,6 +27,8 @@ button.addEventListener("click", (event) => {
     localStorage.setItem("user", JSON.stringify(user));
 
     window.location = "../index.html";
+  } else if (username == "" && password == "") {
+    alert("Los datos ingresados son incorrectos");
   } else {
     alert("Los datos ingresados son incorrectos");
   }
