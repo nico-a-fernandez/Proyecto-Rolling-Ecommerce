@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+:root {
+	--font-family: "Rubik", sans-serif;
+	--color-red: #e63946;
+	--color-beige: #f1faee;
+	--color-green: #a8dadc;
+	--color-greyish-blue: #457b9d;
+	--color-dark-blue: #1d3557;
+	--color-background: #f5f5f5;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--color-greyish-blue) !important;
+	align-self: center;
+}
+
+.main {
+	position: relative;
+	top: 15vh;
+}
+
+.error {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.error > p {
+	font-family: var(--font-family);
+	font-size: 300px;
+	font-weight: 700;
+	text-align: center;
+	color: var(--color-beige);
+}
+
+.carita {
+	width: 300px;
+}
+
+.return {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn {
+	font-family: var(--font-family);
+	font-weight: 400;
+	margin: 1.5rem;
+}
+
+.return > h2 {
+	font-size: 30px;
+	text-align: center;
+	color: var(--color-beige);
+	font-weight: 700;
+}
+
+.logo {
+	margin: 2rem;
+	width: 300px;
+}
+
+@media (max-width: 798px) {
+	.error > p {
+		font-size: 100px;
+	}
+
+	.carita {
+		width: 100px;
+	}
+}
