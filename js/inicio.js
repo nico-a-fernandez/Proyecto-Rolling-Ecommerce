@@ -250,7 +250,7 @@ productos.forEach((producto) => {
         </div>
         <div class="stock" id="stock">
         <p id="stockMessage">${
-          producto.stock > 0 ? "Hay stock" : "No hay stock"
+          producto.stock > 0 ? "Hay stock" : "Sin stock"
         }</p>
         </div>
       </div>
@@ -391,7 +391,7 @@ productosNuevos.forEach((productoNuevo) => {
         </div>
         <div class="stock" id="stock">
         <p id="stockMessage">${
-          productoNuevo.stock > 0 ? "Hay stock" : "No hay stock"
+          productoNuevo.stock > 0 ? "Hay stock" : "Sin stock"
         }</p>
         </div>
       </div>
