@@ -18,7 +18,7 @@ body {
   background-image: url(https://sso.igeoapp.com/img/fondos/fondo_login_erp_2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
 }
 
 .login {
