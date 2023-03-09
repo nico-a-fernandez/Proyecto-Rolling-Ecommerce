@@ -1,12 +1,4 @@
 const botonesAgregar = document.querySelectorAll(".botoncarrito");
-const userInvitado = JSON.parse(localStorage.getItem("user"));
-const userAdmin = JSON.parse(localStorage.getItem("userAdmin"));
-const buttonLog = document.getElementById("login-register");
-
-if (userInvitado || userAdmin) {
-  buttonLog.innerHTML =
-    '<a class="nav-link" href="../html/login.html"><button>Cerrar Sesión</button></a>';
-}
 
 botonesAgregar.forEach((botonAgregar) => {
   botonAgregar.addEventListener("click", (event) => {
@@ -68,9 +60,9 @@ const items = JSON.parse(localStorage.getItem("carrito")) || [];
 const tableBody = document.querySelector("#cartTable, tbody");
 
 // Create a row for each item and append it to the table body
+// Create a row for each item and append it to the table body
 items.forEach((item) => {
   const row = document.createElement("tr");
-  const quantityId = document.querySelector("#input-cantidad");
 
   // Create columns for each item detail
   const idColumn = document.createElement("td");
@@ -95,8 +87,13 @@ items.forEach((item) => {
   deleteBtn.textContent = "Eliminar";
   deleteBtn.classList.add("btn", "btn-danger");
   deleteBtn.addEventListener("click", () => {
+    // Find the index of the item in the array
+    const index = items.indexOf(item);
+
     // Remove the item from the items array
-    items.splice(item, 1);
+    if (index > -1) {
+      items.splice(index, 1);
+    }
 
     // Update the local storage
     localStorage.setItem("carrito", JSON.stringify(items));
