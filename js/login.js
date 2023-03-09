@@ -1,5 +1,6 @@
 const button = document.getElementById("buttonSubmit");
 const buttonHome = document.getElementById("button-home");
+const errorDiv = document.getElementById("errorDiv");
 
 const userAdmin = {
   username: "admin",
@@ -7,6 +8,7 @@ const userAdmin = {
   password: "admin@123",
   admin: true,
 };
+
 localStorage.setItem("userAdmin", JSON.stringify(userAdmin));
 
 button.addEventListener("click", (event) => {
@@ -15,22 +17,26 @@ button.addEventListener("click", (event) => {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
-  const user = JSON.parse(localStorage.getItem("user"));
+  let user = null;
 
   if (username == userAdmin.username && password == userAdmin.password) {
     console.log("Logueado");
 
     window.location = "../html/admin.html";
-  } else if (user.username == username && user.password == password) {
-    user.id = Date.now();
-
-    localStorage.setItem("user", JSON.stringify(user));
-
-    window.location = "../index.html";
-  } else if (username == "" && password == "") {
-    alert("Los datos ingresados son incorrectos");
   } else {
-    alert("Los datos ingresados son incorrectos");
+    user = JSON.parse(localStorage.getItem("user"));
+
+    if (username == "" || password == "") {
+      errorDiv.style.display = "block"; // Mostrar mensaje de error
+    } else if (user && user.username == username && user.password == password) {
+      user.id = Date.now();
+
+      localStorage.setItem("user", JSON.stringify(user));
+
+      window.location = "../index.html";
+    } else {
+      errorDiv.style.display = "block"; // Mostrar mensaje de error
+    }
   }
 });
 

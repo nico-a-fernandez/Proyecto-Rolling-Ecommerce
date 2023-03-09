@@ -41,3 +41,8 @@ h1 {
 .cosa {
   padding-bottom: 3rem;
 }
+
+.divError {
+  display: none;
+  color: red;
+}
