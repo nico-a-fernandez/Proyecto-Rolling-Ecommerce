@@ -86,7 +86,7 @@
           type="text"
           class="form-control"
           id="inputTitle"
-          maxlength="100"
+          maxlength="150"
           aria-describedby="emailHelp"
         />
       </div>
@@ -122,6 +122,67 @@
       <button type="submit" class="btn btn-primary">Cargar</button>
     </form>
     <!-- Fin form agregar producto -->
+
+    <!-- Inicio modal -->
+    <div id="editarProductoModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Aquí iría el contenido del formulario para editar las propiedades del producto -->
+          <h5>Editar producto</h5>
+          <form id="editarProductoForm">
+            <div class="form-group">
+              <label for="titulo">Título</label>
+              <input
+                type="text"
+                class="form-control"
+                id="titulo"
+                placeholder="Ingrese el título del producto"
+                maxlength="150"
+              />
+            </div>
+            <div class="form-group">
+              <label for="precio">Precio</label>
+              <input
+                type="number"
+                class="form-control"
+                id="precio"
+                placeholder="Ingrese el precio del producto"
+                pattern="[0-9]+([,.][0-9]+)?"
+                min="0"
+                max="999999999"
+                maxlength="9"
+              />
+              <small class="form-text text-muted"
+                >Ingrese un valor numérico válido</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="stock">Stock</label>
+              <input
+                type="number"
+                class="form-control"
+                id="stock"
+                placeholder="Ingrese el stock del producto"
+                pattern="[0-9]+"
+                min="0"
+                max="999999999"
+                maxlength="9"
+              />
+              <small class="form-text text-muted"
+                >Ingrese un valor numérico válido</small
+              >
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Guardar cambios
+            </button>
+            <button type="button" class="btn btn-secondary modal-close-button">
+              Cerrar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Fin modal -->
 
     <h1 class="mt-5 mb-5 text-center">Productos</h1>
 

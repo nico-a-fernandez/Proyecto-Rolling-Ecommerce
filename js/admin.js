@@ -54,61 +54,97 @@ function mostrarProductos() {
           <img src="${producto.imagen}" class="card-img-top" alt="...">
           <div class="card-body">
               <h5 class="card-title">${producto.titulo}</h5>
-              <p id="price" class="card-text">$  ${producto.precio}</p>
+              <p id="price" class="card-text">$ ${producto.precio}</p>
               <div class="card-footer text-center text-decoration-none">Stock: ${producto.stock}</div>
               
               <button onclick="eliminarProducto('${producto.id}')" class="btn btn-danger">Eliminar</button>
-              <button onclick="editPrice('${producto.id}')" class="btn btn-warning">Editar precio</button>
-              <button onclick="editStock('${producto.id}')" class="btn btn-success">Editar stock</button>
+              
+              <button onclick="editarProducto('${producto.id}')" class="btn btn-primary">Editar</button>
           </div>
         </div>
         `
   );
   tarjetaProducto.innerHTML = productosMap;
 }
+
+function editarProducto(id) {
+  const modal = document.getElementById("editarProductoModal");
+  const form = document.getElementById("editarProductoForm");
+  const producto = productos.find((producto) => producto.id === id);
+  const tituloInput = form.querySelector("#titulo");
+  const precioInput = form.querySelector("#precio");
+  const stockInput = form.querySelector("#stock");
+
+  tituloInput.value = producto.titulo;
+  precioInput.value = producto.precio;
+  stockInput.value = producto.stock;
+
+  form.onsubmit = function (event) {
+    event.preventDefault();
+
+    const precioValido = /^\d+(\.\d{1,2})?$/.test(precioInput.value);
+    const stockValido = /^\d+$/.test(stockInput.value);
+
+    if (!precioValido) {
+      alert("Ingrese un valor numérico válido para el precio.");
+      return;
+    }
+
+    if (!stockValido) {
+      alert("Ingrese un valor numérico válido para el stock.");
+      return;
+    }
+
+    producto.titulo = tituloInput.value;
+    producto.precio = parseFloat(precioInput.value);
+    producto.stock = parseInt(stockInput.value);
+
+    mostrarProductos();
+    modal.style.display = "none";
+  };
+
+  modal.style.display = "block";
+  const closeButton = modal.querySelector(".modal-close-button");
+  closeButton.onclick = function () {
+    modal.style.display = "none";
+  };
+}
+
+const modal = document.getElementById("editarProductoModal");
+const closeButton = modal.querySelector(".modal-close-button");
+modal.onclick = function (event) {
+  if (event.target == modal || event.target == closeButton) {
+    modal.style.display = "none";
+  }
+};
+
 mostrarProductos();
 
-function mostrarProductos2() {
-  const productosMap = productos2.map(
-    (producto) =>
-      `
-        <div class="card mx-4 my-3" style="width: 18rem;">
-          <img src="${producto.imagen}" class="card-img-top" alt="...">
-          <div class="card-body">
-              <h5 class="card-title">${producto.titulo}</h5>
-              <p id="price" class="card-text">$  ${producto.precio}</p>
-              <div class="card-footer text-center text-decoration-none">Stock: ${producto.stock}</div>
-              
-              <button onclick="eliminarProducto2('${producto.id}')" class="btn btn-danger">Eliminar</button>
-              <button onclick="editPrice2('${producto.id}')" class="btn btn-warning">Editar precio</button>
-              <button onclick="editStock2('${producto.id}')" class="btn btn-success">Editar stock</button>
-          </div>
-        </div>
-        `
-  );
-  tarjetaProducto2.innerHTML = productosMap;
-}
-mostrarProductos2();
+// Generar la card del usuario
+const cardUsuario = `
+  <div class="card">
+    <div class="card-header">
+      <h3>${userInvitado.name} ${userInvitado.lastname}</h3>
+    </div>
+    <div class="card-body">
+      <p><strong>Nombre de usuario:</strong> ${userInvitado.username}</p>
+      <p><strong>Correo electrónico:</strong> ${userInvitado.email}</p>
+      <p><strong>Pass:</strong> ${userInvitado.password}</p>
+    </div>
+    <button id="buttonTrash" onclick="eliminarUser()" class="btn btn-danger">Eliminar</button>
+  </div>
+`;
 
-// Eliminar producto
-function eliminarProducto(id) {
-  const productosFiltrados = productos.filter((producto) => producto.id !== id);
-  const json = JSON.stringify(productosFiltrados);
-  localStorage.setItem("productos", json);
-  productos = productosFiltrados;
-  mostrarProductos();
-}
+// Insertar la tarjeta del usuario en la página web
+document.getElementById("cardUser").innerHTML = cardUsuario;
 
-function eliminarProducto2(id) {
-  const productosFiltrados = productos2.filter(
-    (producto) => producto.id !== id
-  );
-  const json = JSON.stringify(productosFiltrados);
-  localStorage.setItem("productosIngreso", json);
-  productos2 = productosFiltrados;
-  mostrarProductos2();
-}
+// Eliminar user
 
+const buttonDelete = document.getElementById("buttonTrash");
+buttonDelete.addEventListener("click", function eliminarUser() {
+  localStorage.removeItem("user");
+});
+/*
 // Editar precio
 function editPrice(id) {
   let productoId = productos.findIndex((producto) => producto.id == id);
@@ -178,28 +214,4 @@ function editStock2(id) {
   localStorage.setItem("productosIngreso", json);
   mostrarProductos2();
 }
-
-// Generar la card del usuario
-const cardUsuario = `
-  <div class="card">
-    <div class="card-header">
-      <h3>${userInvitado.name} ${userInvitado.lastname}</h3>
-    </div>
-    <div class="card-body">
-      <p><strong>Nombre de usuario:</strong> ${userInvitado.username}</p>
-      <p><strong>Correo electrónico:</strong> ${userInvitado.email}</p>
-      <p><strong>Pass:</strong> ${userInvitado.password}</p>
-    </div>
-    <button id="buttonTrash" onclick="eliminarUser()" class="btn btn-danger">Eliminar</button>
-  </div>
-`;
-
-// Insertar la tarjeta del usuario en la página web
-document.getElementById("cardUser").innerHTML = cardUsuario;
-
-// Eliminar user
-
-const buttonDelete = document.getElementById("buttonTrash");
-buttonDelete.addEventListener("click", function eliminarUser() {
-  localStorage.removeItem("user");
-});
+*/
