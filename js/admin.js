@@ -24,19 +24,40 @@ if (!userAdmin) {
 // Boton del form para agregar productos
 form.onsubmit = (event) => {
   event.preventDefault();
-  const producto = {
-    id: generarID(),
-    titulo: inputTitle.value,
-    precio: inputPrice.value,
-    stock: inputStock.value,
-    imagen: inputImg.value,
+
+  // Validar si la URL de la imagen es válida y se puede cargar
+  const img = new Image();
+  img.onload = () => {
+    const producto = {
+      id: generarID(),
+      titulo: inputTitle.value,
+      precio: inputPrice.value,
+      stock: inputStock.value,
+      imagen: inputImg.value,
+    };
+    alert("Se agrego el producto");
+    productos2.push(producto);
+    const json = JSON.stringify(productos2);
+    localStorage.setItem("productosIngreso", json);
+    form.reset();
+    mostrarProductos2();
   };
-  alert("Se agrego el producto");
-  productos2.push(producto);
-  const json = JSON.stringify(productos2);
-  localStorage.setItem("productosIngreso", json);
-  form.reset();
-  mostrarProductos2();
+  img.onerror = () => {
+    const producto = {
+      id: generarID(),
+      titulo: inputTitle.value,
+      precio: inputPrice.value,
+      stock: inputStock.value,
+      imagen: "../img/producto-sin-imagen.png",
+    };
+    alert("Se agrego el producto con imagen predeterminada");
+    productos2.push(producto);
+    const json = JSON.stringify(productos2);
+    localStorage.setItem("productosIngreso", json);
+    form.reset();
+    mostrarProductos2();
+  };
+  img.src = inputImg.value;
 };
 
 // Funciones
