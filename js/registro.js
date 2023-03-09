@@ -11,12 +11,31 @@ const inputLastname = document.getElementById("lastname");
 button.addEventListener("click", (event) => {
   event.preventDefault();
 
+  const username = document.getElementById("username").value;
+  const name = document.getElementById("name").value;
+  const lastname = document.getElementById("lastname").value;
+  const email = document.getElementById("correo").value;
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("passwordConfirm").value;
+
+  if (
+    !username ||
+    !name ||
+    !lastname ||
+    !email ||
+    !password ||
+    !confirmPassword
+  ) {
+    alert("Por favor complete todos los campos");
+    return;
+  }
+
   const user = {
-    username: document.getElementById("username").value || generarUsername(),
-    name: document.getElementById("name").value,
-    lastname: document.getElementById("lastname").value,
-    email: document.getElementById("correo").value,
-    password: document.getElementById("password").value,
+    username,
+    name,
+    lastname,
+    email,
+    password,
   };
 
   localStorage.setItem("user", JSON.stringify(user));
