@@ -122,6 +122,9 @@ function editarProducto(id) {
     producto.precio = parseFloat(precioInput.value);
     producto.stock = parseInt(stockInput.value);
 
+    // Actualizar el array de productos en el Local Storage
+    localStorage.setItem("productos", JSON.stringify(productos));
+
     mostrarProductos();
     modal.style.display = "none";
   };
@@ -172,6 +175,9 @@ function editarProducto2(id) {
     producto.titulo = tituloInput.value;
     producto.precio = parseFloat(precioInput.value);
     producto.stock = parseInt(stockInput.value);
+
+    // Actualizar el array de productos en el Local Storage
+    localStorage.setItem("productosIngreso", JSON.stringify(productos2));
 
     mostrarProductos2();
     modal.style.display = "none";
