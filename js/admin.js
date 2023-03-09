@@ -31,6 +31,7 @@ form.onsubmit = (event) => {
     stock: inputStock.value,
     imagen: inputImg.value,
   };
+  alert("Se agrego el producto");
   productos2.push(producto);
   const json = JSON.stringify(productos2);
   localStorage.setItem("productosIngreso", json);
@@ -67,6 +68,28 @@ function mostrarProductos() {
   tarjetaProducto.innerHTML = productosMap;
 }
 
+function mostrarProductos2() {
+  const productosMap = productos2.map(
+    (producto) =>
+      `
+        <div class="card mx-4 my-3" style="width: 18rem;">
+          <img src="${producto.imagen}" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">${producto.titulo}</h5>
+              <p id="price" class="card-text">$ ${producto.precio}</p>
+              <div class="card-footer text-center text-decoration-none">Stock: ${producto.stock}</div>
+              
+              <button onclick="eliminarProducto2('${producto.id}')" class="btn btn-danger">Eliminar</button>
+              
+              <button onclick="editarProducto2('${producto.id}')" class="btn btn-primary">Editar</button>
+          </div>
+        </div>
+        `
+  );
+  tarjetaProducto2.innerHTML = productosMap;
+}
+
+// Editar el producto
 function editarProducto(id) {
   const modal = document.getElementById("editarProductoModal");
   const form = document.getElementById("editarProductoForm");
@@ -118,7 +141,51 @@ modal.onclick = function (event) {
   }
 };
 
+function editarProducto2(id) {
+  const modal = document.getElementById("editarProductoModal");
+  const form = document.getElementById("editarProductoForm");
+  const producto = productos2.find((producto) => producto.id === id);
+  const tituloInput = form.querySelector("#titulo");
+  const precioInput = form.querySelector("#precio");
+  const stockInput = form.querySelector("#stock");
+
+  tituloInput.value = producto.titulo;
+  precioInput.value = producto.precio;
+  stockInput.value = producto.stock;
+
+  form.onsubmit = function (event) {
+    event.preventDefault();
+
+    const precioValido = /^\d+(\.\d{1,2})?$/.test(precioInput.value);
+    const stockValido = /^\d+$/.test(stockInput.value);
+
+    if (!precioValido) {
+      alert("Ingrese un valor numérico válido para el precio.");
+      return;
+    }
+
+    if (!stockValido) {
+      alert("Ingrese un valor numérico válido para el stock.");
+      return;
+    }
+
+    producto.titulo = tituloInput.value;
+    producto.precio = parseFloat(precioInput.value);
+    producto.stock = parseInt(stockInput.value);
+
+    mostrarProductos2();
+    modal.style.display = "none";
+  };
+
+  modal.style.display = "block";
+  const closeButton = modal.querySelector(".modal-close-button");
+  closeButton.onclick = function () {
+    modal.style.display = "none";
+  };
+}
+
 mostrarProductos();
+mostrarProductos2();
 
 // Generar la card del usuario
 const cardUsuario = `
@@ -144,6 +211,31 @@ const buttonDelete = document.getElementById("buttonTrash");
 buttonDelete.addEventListener("click", function eliminarUser() {
   localStorage.removeItem("user");
 });
+
+function eliminarProducto(id) {
+  if (confirm("¿Está seguro de eliminar este producto?")) {
+    const productosFiltrados = productos.filter(
+      (producto) => producto.id !== id
+    );
+    const json = JSON.stringify(productosFiltrados);
+    localStorage.setItem("productosIngreso", json);
+    productos = productosFiltrados;
+    mostrarProductos();
+  }
+}
+
+function eliminarProducto2(id) {
+  if (confirm("¿Está seguro de eliminar este producto?")) {
+    const productosFiltrados = productos2.filter(
+      (producto) => producto.id !== id
+    );
+    const json = JSON.stringify(productosFiltrados);
+    localStorage.setItem("productosIngreso", json);
+    productos2 = productosFiltrados;
+    mostrarProductos2();
+  }
+}
+
 /*
 // Editar precio
 function editPrice(id) {
