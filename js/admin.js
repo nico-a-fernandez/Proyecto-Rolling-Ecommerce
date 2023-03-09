@@ -13,8 +13,8 @@ const userAdmin = JSON.parse(localStorage.getItem("userAdmin"));
 const userInvitado = JSON.parse(localStorage.getItem("user"));
 const localData = JSON.parse(localStorage.getItem("productos"));
 const localData2 = JSON.parse(localStorage.getItem("productosIngreso"));
-const productos = localData || [];
-const productos2 = localData2 || [];
+let productos = localData || [];
+let productos2 = localData2 || [];
 
 // Funcion para verificar si esta logueado como admin (verifica el localstorage)
 if (!userAdmin) {
@@ -33,7 +33,7 @@ form.onsubmit = (event) => {
   };
   productos2.push(producto);
   const json = JSON.stringify(productos2);
-  localStorage.setItem("productos", json);
+  localStorage.setItem("productosIngreso", json);
   form.reset();
   mostrarProductos2();
 };
@@ -112,7 +112,16 @@ function eliminarProducto2(id) {
 // Editar precio
 function editPrice(id) {
   let productoId = productos.findIndex((producto) => producto.id == id);
-  productos[productoId].precio = prompt("Ingrese el nuevo precio");
+  let newPrice;
+  do {
+    let priceInput = prompt("Ingrese el nuevo precio");
+    newPrice = parseInt(priceInput);
+    if (isNaN(newPrice)) {
+      alert("Ingrese un valor numérico válido");
+    }
+  } while (isNaN(newPrice));
+  productos[productoId].precio = newPrice.toFixed(2);
+
   const json = JSON.stringify(productos);
   localStorage.setItem("productos", json);
 
@@ -121,7 +130,15 @@ function editPrice(id) {
 
 function editPrice2(id) {
   let productoId = productos2.findIndex((producto) => producto.id == id);
-  productos2[productoId].precio = prompt("Ingrese el nuevo precio");
+  let newPrice;
+  do {
+    let priceInput = prompt("Ingrese el nuevo precio");
+    newPrice = parseInt(priceInput);
+    if (isNaN(newPrice)) {
+      alert("Ingrese un valor numérico válido");
+    }
+  } while (isNaN(newPrice));
+  productos2[productoId].precio = newPrice.toFixed(2);
   const json = JSON.stringify(productos2);
   localStorage.setItem("productosIngreso", json);
 
@@ -131,7 +148,15 @@ function editPrice2(id) {
 // Editar Stock
 function editStock(id) {
   let productoId = productos.findIndex((producto) => producto.id == id);
-  productos[productoId].stock = prompt("Ingrese el nuevo stock");
+  let newStock;
+  do {
+    let stockInput = prompt("Ingrese el nuevo stock");
+    newStock = parseInt(stockInput);
+    if (isNaN(newStock)) {
+      alert("Ingrese un valor numérico válido");
+    }
+  } while (isNaN(newStock));
+  productos[productoId].stock = newStock;
   const json = JSON.stringify(productos);
   localStorage.setItem("productos", json);
 
@@ -140,10 +165,17 @@ function editStock(id) {
 
 function editStock2(id) {
   let productoId = productos2.findIndex((producto) => producto.id == id);
-  productos2[productoId].stock = prompt("Ingrese el nuevo stock");
+  let newStock;
+  do {
+    let stockInput = prompt("Ingrese el nuevo stock");
+    newStock = parseInt(stockInput);
+    if (isNaN(newStock)) {
+      alert("Ingrese un valor numérico válido");
+    }
+  } while (isNaN(newStock));
+  productos2[productoId].stock = newStock;
   const json = JSON.stringify(productos2);
   localStorage.setItem("productosIngreso", json);
-
   mostrarProductos2();
 }
 
