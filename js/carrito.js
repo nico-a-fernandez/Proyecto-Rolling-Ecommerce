@@ -87,21 +87,24 @@ items.forEach((item) => {
   deleteBtn.textContent = "Eliminar";
   deleteBtn.classList.add("btn", "btn-danger");
   deleteBtn.addEventListener("click", () => {
-    // Find the index of the item in the array
-    const index = items.indexOf(item);
+    if (confirm("¿Estás seguro de que quieres eliminar este producto?")) {
+      // Find the index of the item in the array
+      const index = items.indexOf(item);
 
-    // Remove the item from the items array
-    if (index > -1) {
-      items.splice(index, 1);
+      // Remove the item from the items array
+      if (index > -1) {
+        items.splice(index, 1);
+      }
+
+      // Update the local storage
+      localStorage.setItem("carrito", JSON.stringify(items));
+
+      // Remove the row from the table
+      row.remove();
+      window.location.href = "./carrito.html";
     }
-
-    // Update the local storage
-    localStorage.setItem("carrito", JSON.stringify(items));
-
-    // Remove the row from the table
-    row.remove();
-    window.location.href = "./carrito.html";
   });
+
   deleteBtnColumn.appendChild(deleteBtn);
 
   // Append the columns to the row
