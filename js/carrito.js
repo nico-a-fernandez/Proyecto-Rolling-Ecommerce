@@ -1,56 +1,64 @@
 const botonesAgregar = document.querySelectorAll(".botoncarrito");
+const userInvitado = JSON.parse(localStorage.getItem("user"));
+const userAdmin = JSON.parse(localStorage.getItem("userAdmin"));
+const buttonLog = document.getElementById("login-register");
+
+if (userInvitado || userAdmin) {
+  buttonLog.innerHTML =
+    '<a class="nav-link" href="../html/login.html"><button>Cerrar Sesión</button></a>';
+}
 
 botonesAgregar.forEach((botonAgregar) => {
-	botonAgregar.addEventListener("click", (event) => {
-		// Obtener el ID del botón
-		const idBoton = event.target.id;
+  botonAgregar.addEventListener("click", (event) => {
+    // Obtener el ID del botón
+    const idBoton = event.target.id;
 
-		// Obtener el ID del producto desde el ID del botón
-		const idProducto = idBoton.substring(idBoton.indexOf("-") + 1);
+    // Obtener el ID del producto desde el ID del botón
+    const idProducto = idBoton.substring(idBoton.indexOf("-") + 1);
 
-		// Buscar el producto correspondiente en el array "productos"
-		const productos = JSON.parse(localStorage.getItem("productos")) || [];
-		const producto = productos.find((p) => p.id === idProducto);
+    // Buscar el producto correspondiente en el array "productos"
+    const productos = JSON.parse(localStorage.getItem("productos")) || [];
+    const producto = productos.find((p) => p.id === idProducto);
 
-		if (producto) {
-			// Crear el nuevo array "carrito" si no existe, o agregar el producto al final del mismo
-			const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-			carrito.push(producto);
+    if (producto) {
+      // Crear el nuevo array "carrito" si no existe, o agregar el producto al final del mismo
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      carrito.push(producto);
 
-			// Guardar el nuevo array "carrito" en el LocalStorage
-			localStorage.setItem("carrito", JSON.stringify(carrito));
+      // Guardar el nuevo array "carrito" en el LocalStorage
+      localStorage.setItem("carrito", JSON.stringify(carrito));
 
-			// Mostrar mensaje de confirmación
-			alert("El producto ha sido agregado al carrito.");
-		}
-	});
+      // Mostrar mensaje de confirmación
+      alert("El producto ha sido agregado al carrito.");
+    }
+  });
 });
 
 botonesAgregar.forEach((botonAgregar) => {
-	botonAgregar.addEventListener("click", (event) => {
-		// Obtener el ID del botón
-		const idBoton = event.target.id;
+  botonAgregar.addEventListener("click", (event) => {
+    // Obtener el ID del botón
+    const idBoton = event.target.id;
 
-		// Obtener el ID del producto desde el ID del botón
-		const idProducto = idBoton.substring(idBoton.indexOf("-") + 1);
+    // Obtener el ID del producto desde el ID del botón
+    const idProducto = idBoton.substring(idBoton.indexOf("-") + 1);
 
-		// Buscar el producto correspondiente en el array "productos"
-		const productosIngreso =
-			JSON.parse(localStorage.getItem("productosIngreso")) || [];
-		const producto = productosIngreso.find((p) => p.id === idProducto);
+    // Buscar el producto correspondiente en el array "productos"
+    const productosIngreso =
+      JSON.parse(localStorage.getItem("productosIngreso")) || [];
+    const producto = productosIngreso.find((p) => p.id === idProducto);
 
-		if (producto) {
-			// Crear el nuevo array "carrito" si no existe, o agregar el producto al final del mismo
-			const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-			carrito.push(producto);
+    if (producto) {
+      // Crear el nuevo array "carrito" si no existe, o agregar el producto al final del mismo
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      carrito.push(producto);
 
-			// Guardar el nuevo array "carrito" en el LocalStorage
-			localStorage.setItem("carrito", JSON.stringify(carrito));
+      // Guardar el nuevo array "carrito" en el LocalStorage
+      localStorage.setItem("carrito", JSON.stringify(carrito));
 
-			// Mostrar mensaje de confirmación
-			alert("El producto ha sido agregado al carrito.");
-		}
-	});
+      // Mostrar mensaje de confirmación
+      alert("El producto ha sido agregado al carrito.");
+    }
+  });
 });
 
 // Retrieve items from local storage
@@ -61,60 +69,60 @@ const tableBody = document.querySelector("#cartTable, tbody");
 
 // Create a row for each item and append it to the table body
 items.forEach((item) => {
-	const row = document.createElement("tr");
-	const quantityId = document.querySelector("#input-cantidad");
+  const row = document.createElement("tr");
+  const quantityId = document.querySelector("#input-cantidad");
 
-	// Create columns for each item detail
-	const idColumn = document.createElement("td");
-	idColumn.textContent = item.id;
+  // Create columns for each item detail
+  const idColumn = document.createElement("td");
+  idColumn.textContent = item.id;
 
-	const nameColumn = document.createElement("td");
-	nameColumn.textContent = item.titulo;
+  const nameColumn = document.createElement("td");
+  nameColumn.textContent = item.titulo;
 
-	const priceColumn = document.createElement("td");
-	priceColumn.textContent = item.precio;
+  const priceColumn = document.createElement("td");
+  priceColumn.textContent = item.precio;
 
-	const subtotalColumn = item.precio;
+  const subtotalColumn = item.precio;
 
-	const quantityColumn = document.createElement("td");
-	quantityColumn.textContent = 1;
+  const quantityColumn = document.createElement("td");
+  quantityColumn.textContent = 1;
 
-	subtotalColumn.textContent = item.price;
+  subtotalColumn.textContent = item.price;
 
-	// Create delete button column
-	const deleteBtnColumn = document.createElement("td");
-	const deleteBtn = document.createElement("button");
-	deleteBtn.textContent = "Eliminar";
-	deleteBtn.classList.add("btn", "btn-danger");
-	deleteBtn.addEventListener("click", () => {
-		// Remove the item from the items array
-		items.splice(item, 1);
+  // Create delete button column
+  const deleteBtnColumn = document.createElement("td");
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Eliminar";
+  deleteBtn.classList.add("btn", "btn-danger");
+  deleteBtn.addEventListener("click", () => {
+    // Remove the item from the items array
+    items.splice(item, 1);
 
-		// Update the local storage
-		localStorage.setItem("carrito", JSON.stringify(items));
+    // Update the local storage
+    localStorage.setItem("carrito", JSON.stringify(items));
 
-		// Remove the row from the table
-		row.remove();
-		window.location.href = "./carrito.html";
-	});
-	deleteBtnColumn.appendChild(deleteBtn);
+    // Remove the row from the table
+    row.remove();
+    window.location.href = "./carrito.html";
+  });
+  deleteBtnColumn.appendChild(deleteBtn);
 
-	// Append the columns to the row
-	row.appendChild(idColumn);
-	row.appendChild(nameColumn);
-	row.appendChild(priceColumn);
-	row.appendChild(quantityColumn);
-	row.appendChild(deleteBtnColumn);
+  // Append the columns to the row
+  row.appendChild(idColumn);
+  row.appendChild(nameColumn);
+  row.appendChild(priceColumn);
+  row.appendChild(quantityColumn);
+  row.appendChild(deleteBtnColumn);
 
-	// Append the row to the table body
-	tableBody.appendChild(row);
+  // Append the row to the table body
+  tableBody.appendChild(row);
 });
 
 const cart = JSON.parse(localStorage.getItem("carrito"));
 let total = 0;
 
 cart.forEach((item) => {
-	total += parseInt(item.precio);
+  total += parseInt(item.precio);
 });
 
 // Actualiza el contenido del elemento HTML con el total del carrito
